@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Button, Collapse, Tag, Row, Input } from "antd";
+import { Button, Collapse } from "antd";
+import PathItem from "./PathItem";
 
 const { Panel } = Collapse;
 
@@ -25,22 +26,12 @@ export default api => {
                   const { methodName, operationId, summary, tagDesc } = method;
                   // return <div key={operationId}>{summary}</div>;
                   return (
-                    <Row>
-                      <div>
-                        <Tag color="#f50">{methodName}</Tag>
-                      </div>
-                      <div>
-                        方法名: <Input value={operationId} />
-                      </div>
-                      <div>{summary}</div>
-                      <div>
-                        {tagDesc?.map(tag => (
-                          <Tag key={tag} color="#108ee9">
-                            {tag}
-                          </Tag>
-                        ))}
-                      </div>
-                    </Row>
+                    <PathItem
+                      key={operationId}
+                      method={method}
+                      path={path}
+                      onGenerate={console.log}
+                    />
                   );
                 })}
               </Panel>
