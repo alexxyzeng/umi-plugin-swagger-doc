@@ -1,0 +1,42 @@
+{
+  "name": "umi-plugin-swagger-doc",
+  "version": "0.0.1",
+  "description": "generate services, mock data and enums from swagger",
+  "authors": {
+    "name": "alexzeng",
+    "email": "xiayao.zeng@gmail.com"
+  },
+  "repository": "/umi-plugin-swagger-doc",
+  "peerDependencies": {
+    "antd": "4.x",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "umi": "2.x || ^2.9.0-0"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "start:mini": "cross-env UMI_UI=1 APP_ROOT=example umi dev",
+    "start": "cross-env CURRENT_PROJECT=example umi ui",
+    "build": "father-build",
+    "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish"
+  },
+  "devDependencies": {
+    "antd": "^4.0.0-alpha.0",
+    "cross-env": "^6.0.3",
+    "father-build": "^1.8.0",
+    "np": "^5.0.3",
+    "umi": "^2.9.0",
+    "umi-types": ">= 0.4.0-beta.4"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "src",
+    "ui"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "swagger-to-jsdoc": "^1.0.16"
+  }
+}
