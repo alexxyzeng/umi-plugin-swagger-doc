@@ -1,0 +1,6 @@
+.umi-ui-layouts-dashboard_content {
+  overflow-y: scroll !important;
+}
+.ant-row > div {
+  padding: 4px 8px;
+}

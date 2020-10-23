@@ -1,12 +1,11 @@
 import { join, resolve } from "path";
 
 export default {
-  routes: [{ path: "/", component: "./index" }],
   plugins: [
     [
       join(__dirname, "..", require("../package").main || "index.js"),
       {
-        swaggerUrl: "http://df-datacenter.v220.svc.cluster.local",
+        swaggerUrl: "http://df-gateway.v220.svc.cluster.local/fm-route",
         swaggerDocPath: "/v2/api-docs",
         swaggerUIPath: "",
         // 配置文件路径
@@ -15,7 +14,6 @@ export default {
         mockPath: resolve(__dirname, "mock"),
         // enum数据路径
         enumPath: resolve(__dirname, "enum")
-        // service路径
       }
     ]
   ]

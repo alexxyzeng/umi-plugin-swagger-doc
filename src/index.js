@@ -1,10 +1,17 @@
 // ref:
 // - https://umijs.org/plugin/develop.html
+// import { IApi } from "umi-types";
 import fs from "fs";
 import path from "path";
 import { swaggerDocPath, generateFiles } from "swagger-to-jsdoc";
 import fetch from "node-fetch";
 
+let routeList = new Set();
+/**
+ *
+ * @param {IApi} api
+ * @param {*} options
+ */
 export default function(api, options) {
   // Example: output the webpack config
   api.addUIPlugin(require.resolve("../dist/index.umd"));
@@ -13,7 +20,13 @@ export default function(api, options) {
       getSwaggerData(api, options, success);
     }
   });
-  console.log(options, "---- options");
+  api.modifyRoutes(routes => {
+    routeList = new Set();
+    console.log(routes, "--- modified routes");
+    fs.writeFileSync("./routes.json", JSON.stringify(routes, null, 2));
+    recursiveParseRoutes(routes);
+    return routes;
+  });
 }
 
 function getSwaggerData(api, options, success, failure) {
@@ -27,6 +40,7 @@ function getSwaggerData(api, options, success, failure) {
   if (!fs.existsSync(configPath)) {
     fs.mkdirSync(configPath);
   }
+
   // 读取对应的路径
   fetch(`${swaggerUrl}/${swaggerDocPath}`)
     .then(res => res.json())
@@ -39,7 +53,12 @@ function getSwaggerData(api, options, success, failure) {
         tagHash[name] = description;
       });
       for (let path in paths) {
-        let pathInfo = { path, methods: [], tag: "" };
+        let pathInfo = {
+          path,
+          methods: [],
+          tag: "",
+          routes: Array.from(routeList)
+        };
         const pathMethods = paths[path];
         const tagSet = new Set();
         for (let method in pathMethods) {
@@ -53,6 +72,7 @@ function getSwaggerData(api, options, success, failure) {
           });
           methodInfo.tagDesc = tagDesc;
           methodInfo.methodName = method;
+
           pathInfo.methods.push(methodInfo);
         }
         pathInfo.tag = Array.from(tagSet).join(",");
@@ -66,4 +86,14 @@ function getSwaggerData(api, options, success, failure) {
       // fs.writeFileSync(definitionUrl, JSON.stringify(definitions, null, 2));
       // generateFiles(paths, definitions, undefined, []);
     });
+}
+
+function recursiveParseRoutes(routes) {
+  routes.forEach(route => {
+    const { path, routes: subRoutes } = route;
+    routeList.add(path);
+    if (Array.isArray(subRoutes) && subRoutes.length > 0) {
+      recursiveParseRoutes(subRoutes);
+    }
+  });
 }
