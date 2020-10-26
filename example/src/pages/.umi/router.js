@@ -38,6 +38,11 @@ const routes = [
         component: require('../user/index.js').default,
       },
       {
+        path: '/user/service/appIndex',
+        exact: true,
+        component: require('../user/service/appIndex.js').default,
+      },
+      {
         path: '/third',
         exact: false,
         component: require('../third/_layout.js').default,

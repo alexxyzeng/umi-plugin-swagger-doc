@@ -2,7 +2,7 @@
 // - https://umijs.org/plugin/develop.html
 // import { IApi } from "umi-types";
 import fs from "fs";
-import path from "path";
+import { resolve } from "path";
 import { swaggerDocPath, generateFile } from "swagger-to-jsdoc";
 import fetch from "node-fetch";
 
@@ -37,12 +37,14 @@ export default function(api, options) {
   });
   api.modifyRoutes(routes => {
     routeList = new Set();
-    fs.writeFileSync("./routes.json", JSON.stringify(routes, null, 2));
+    // fs.writeFileSync("./routes.json", JSON.stringify(routes, null, 2));
     recursiveParseRoutes(routes);
     return routes;
   });
 }
 
+const serviceConfigName = "serviceConfig.json";
+const methodConfigName = "method.json";
 function getSwaggerData(api, options, payload, success, failure) {
   const {
     swaggerUrl,
@@ -54,7 +56,20 @@ function getSwaggerData(api, options, payload, success, failure) {
   if (!fs.existsSync(configPath)) {
     fs.mkdirSync(configPath);
   }
+  const serviceConfigPath = resolve(configPath, serviceConfigName);
+  let serviceConfig = {};
+  if (fs.existsSync(serviceConfigPath)) {
+    serviceConfig =
+      JSON.parse(fs.readFileSync(serviceConfigPath, "utf-8") || "{}") || {};
+  }
 
+  const methodConfigPath = resolve(configPath, methodConfigName);
+  let methodConfig = {};
+  if (fs.existsSync(methodConfigPath)) {
+    methodConfig = JSON.parse(
+      fs.readFileSync(methodConfigPath, "utf-8") || "{}"
+    );
+  }
   // 读取对应的路径
   fetch(`${swaggerUrl}/${swaggerDocPath}`)
     .then(res => res.json())
@@ -67,24 +82,40 @@ function getSwaggerData(api, options, payload, success, failure) {
         const { name, description } = tag;
         tagHash[name] = description;
       });
-      for (let path in paths) {
+      for (let pathStr in paths) {
+        let pathConfig = serviceConfig?.[pathStr];
+        let serviceName = pathConfig?.name;
+        let pathUrl = pathConfig?.path || "";
+        if (!pathConfig) {
+          serviceName = pathStr.replace(/\//g, "-").replace("-", "");
+          serviceConfig[pathStr] = { name: serviceName };
+        }
         let pathInfo = {
-          path,
+          path: pathStr,
+          pathName: serviceName,
           methods: [],
           tag: "",
-          routes: Array.from(routeList)
+          routes: Array.from(routeList),
+          targetPath: pathUrl
         };
-        const pathMethods = paths[path];
+        const pathMethods = paths[pathStr];
         const tagSet = new Set();
         for (let method in pathMethods) {
           const methodInfo = pathMethods[method];
-          const { tags: tagList = [] } = methodInfo;
+          const { tags: tagList = [], operationId } = methodInfo;
+          let name = methodConfig[operationId];
+          // console.log(operationId, "----", name);
+          if (!name) {
+            name = operationId;
+            methodConfig[operationId] = operationId;
+          }
           let tagDesc = [];
           tagList?.forEach(tag => {
             const tagInfo = tagHash[tag];
             tagSet.add(tagInfo);
             tagDesc.push(tagInfo);
           });
+          methodInfo.name = name;
           methodInfo.tagDesc = tagDesc;
           methodInfo.methodName = method;
 
@@ -93,19 +124,36 @@ function getSwaggerData(api, options, payload, success, failure) {
         pathInfo.tag = Array.from(tagSet).join(",");
         result.push(pathInfo);
       }
+      fs.writeFileSync(
+        serviceConfigPath,
+        JSON.stringify(serviceConfig, null, 2)
+      );
+      fs.writeFileSync(methodConfigPath, JSON.stringify(methodConfig, null, 2));
       success && success({ data: result });
-
-      // const pathUrl = path.resolve(configPath, "paths.json");
-      // fs.writeFileSync(pathUrl, JSON.stringify(paths, null, 2));
-      // const definitionUrl = path.resolve(configPath, "definitions.json");
-      // fs.writeFileSync(definitionUrl, JSON.stringify(definitions, null, 2));
-      // generateFiles(paths, definitions, undefined, []);
     });
 }
 
 function generateService(api, options, payload, success, failure) {
-  const { pathItem, fileName, names } = payload;
+  const { pathItem, fileName, names, path: pathUrl } = payload;
   generateFile(payload, global.definitions, undefined, options);
+
+  const { configPath } = options;
+  const serviceConfigPath = resolve(configPath, serviceConfigName);
+  const serviceConfig = JSON.parse(
+    fs.readFileSync(serviceConfigPath, "utf-8") || "{}"
+  );
+  const { path } = pathItem;
+  serviceConfig[path] = { path: pathUrl, name: fileName };
+  fs.writeFileSync(serviceConfigPath, JSON.stringify(serviceConfig, null, 2));
+
+  const methodConfigPath = resolve(configPath, methodConfigName);
+  const methodConfig = JSON.parse(
+    fs.readFileSync(methodConfigPath, "utf-8") || "{}"
+  );
+  for (let nameKey in names) {
+    methodConfig[nameKey] = names[nameKey];
+  }
+  fs.writeFileSync(methodConfigPath, JSON.stringify(methodConfig, null, 2));
 }
 
 function recursiveParseRoutes(routes) {

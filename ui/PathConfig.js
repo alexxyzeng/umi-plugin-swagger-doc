@@ -4,12 +4,12 @@ import { Button, Row, Select, Input } from "antd";
 const { Option } = Select;
 
 function PathHeader({ pathItem, onChange, value, onGenerate }) {
-  const { path, tag, routes } = pathItem;
+  const { path, pathName, tag, routes } = pathItem;
   const { current: onRouteChange } = useRef(route => {
     onChange(route, path);
   });
 
-  const [fileName, setFileName] = useState(path.replace(/\//g, "-"));
+  const [fileName, setFileName] = useState(pathName);
   const { current: onFileNameChange } = useRef(event => {
     setFileName(event.target.value);
   });
@@ -25,7 +25,7 @@ function PathHeader({ pathItem, onChange, value, onGenerate }) {
           style={{ width: 160 }}
           onChange={onRouteChange}
           onClick={event => event.preventDefault()}
-          value={value}
+          value={value || "/"}
           placeholder="请选择目标节点"
         >
           {routes?.map(route => (

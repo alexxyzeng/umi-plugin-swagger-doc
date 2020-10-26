@@ -15,9 +15,9 @@
         "component": "./src/pages/user/home/index.js"
       },
       {
-        "path": "/user/home/service/appIndex",
+        "path": "/user/home/service/-app-index",
         "exact": true,
-        "component": "./src/pages/user/home/service/appIndex.js"
+        "component": "./src/pages/user/home/service/-app-index.js"
       },
       {
         "path": "/user",

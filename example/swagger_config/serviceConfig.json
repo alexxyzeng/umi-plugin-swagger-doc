@@ -1,0 +1,1407 @@
+{
+  "/app/index": {
+    "path": "/user",
+    "name": "appIndex"
+  },
+  "/app/index/check-offline-data-update": {
+    "name": "app-index-check-offline-data-update"
+  },
+  "/budget/energy/cost/import/{budgetExecutionMonthlyId}": {
+    "name": "budget-energy-cost-import-{budgetExecutionMonthlyId}"
+  },
+  "/building": {
+    "name": "building"
+  },
+  "/building/check-unique": {
+    "name": "building-check-unique"
+  },
+  "/building/region": {
+    "name": "building-region"
+  },
+  "/building/searchByIds": {
+    "name": "building-searchByIds"
+  },
+  "/building/whole": {
+    "name": "building-whole"
+  },
+  "/building/{id}": {
+    "name": "building-{id}"
+  },
+  "/comDict": {
+    "name": "comDict"
+  },
+  "/comDict/findUnit": {
+    "name": "comDict-findUnit"
+  },
+  "/comDict/{dictType}": {
+    "name": "comDict-{dictType}"
+  },
+  "/config/reason": {
+    "name": "config-reason"
+  },
+  "/config/reason/{type}": {
+    "name": "config-reason-{type}"
+  },
+  "/customer": {
+    "name": "customer"
+  },
+  "/customer/search": {
+    "name": "customer-search"
+  },
+  "/customer/{id}": {
+    "name": "customer-{id}"
+  },
+  "/data/import": {
+    "name": "data-import"
+  },
+  "/data/import/task": {
+    "name": "data-import-task"
+  },
+  "/demand": {
+    "name": "demand"
+  },
+  "/demand-process": {
+    "name": "demand-process"
+  },
+  "/demand-process/all": {
+    "name": "demand-process-all"
+  },
+  "/demand-process/{demandId}/last": {
+    "name": "demand-process-{demandId}-last"
+  },
+  "/demand-process/{id}": {
+    "name": "demand-process-{id}"
+  },
+  "/demand/additional-process": {
+    "name": "demand-additional-process"
+  },
+  "/demand/additional-process/unchecked/num": {
+    "name": "demand-additional-process-unchecked-num"
+  },
+  "/demand/additional-process/{id}": {
+    "name": "demand-additional-process-{id}"
+  },
+  "/demand/common/{demandId}": {
+    "name": "demand-common-{demandId}"
+  },
+  "/demand/config": {
+    "name": "demand-config"
+  },
+  "/demand/config/by-product": {
+    "name": "demand-config-by-product"
+  },
+  "/demand/config/by-tenant": {
+    "name": "demand-config-by-tenant"
+  },
+  "/demand/config/init-by-product": {
+    "name": "demand-config-init-by-product"
+  },
+  "/demand/config/init-by-tenant": {
+    "name": "demand-config-init-by-tenant"
+  },
+  "/demand/config/{id}": {
+    "name": "demand-config-{id}"
+  },
+  "/demand/evaluate": {
+    "name": "demand-evaluate"
+  },
+  "/demand/evaluate/{id}": {
+    "name": "demand-evaluate-{id}"
+  },
+  "/demand/export": {
+    "name": "demand-export"
+  },
+  "/demand/numbers-group-by-status": {
+    "name": "demand-numbers-group-by-status"
+  },
+  "/demand/service-counter": {
+    "name": "demand-service-counter"
+  },
+  "/demand/track": {
+    "name": "demand-track"
+  },
+  "/demand/track/all": {
+    "name": "demand-track-all"
+  },
+  "/demand/track/{id}": {
+    "name": "demand-track-{id}"
+  },
+  "/demand/type": {
+    "name": "demand-type"
+  },
+  "/demand/type/all": {
+    "name": "demand-type-all"
+  },
+  "/demand/type/check": {
+    "name": "demand-type-check"
+  },
+  "/demand/type/photograph/level": {
+    "name": "demand-type-photograph-level"
+  },
+  "/demand/type/photograph/level/{parentId}": {
+    "name": "demand-type-photograph-level-{parentId}"
+  },
+  "/demand/type/ref": {
+    "name": "demand-type-ref"
+  },
+  "/demand/type/ref/all": {
+    "name": "demand-type-ref-all"
+  },
+  "/demand/type/ref/photograph/level": {
+    "name": "demand-type-ref-photograph-level"
+  },
+  "/demand/type/ref/photograph/level/{parentId}": {
+    "name": "demand-type-ref-photograph-level-{parentId}"
+  },
+  "/demand/type/ref/sync": {
+    "name": "demand-type-ref-sync"
+  },
+  "/demand/type/ref/{id}": {
+    "name": "demand-type-ref-{id}"
+  },
+  "/demand/type/{id}": {
+    "name": "demand-type-{id}"
+  },
+  "/demand/{demand-id}/evaluate": {
+    "name": "demand-{demand-id}-evaluate"
+  },
+  "/demand/{demand-id}/track": {
+    "name": "demand-{demand-id}-track"
+  },
+  "/demand/{demand-id}/track/files": {
+    "name": "demand-{demand-id}-track-files"
+  },
+  "/demand/{demand-id}/visit": {
+    "name": "demand-{demand-id}-visit"
+  },
+  "/demand/{id}": {
+    "name": "demand-{id}"
+  },
+  "/demand/{id}/affirm": {
+    "name": "demand-{id}-affirm"
+  },
+  "/demand/{id}/complete": {
+    "name": "demand-{id}-complete"
+  },
+  "/demand/{id}/demand-type": {
+    "name": "demand-{id}-demand-type"
+  },
+  "/demand/{id}/obsolete": {
+    "name": "demand-{id}-obsolete"
+  },
+  "/demand/{id}/review": {
+    "name": "demand-{id}-review"
+  },
+  "/demand/{id}/workorder": {
+    "name": "demand-{id}-workorder"
+  },
+  "/department/download": {
+    "name": "department-download"
+  },
+  "/department/ext/{id}": {
+    "name": "department-ext-{id}"
+  },
+  "/department/manage": {
+    "name": "department-manage"
+  },
+  "/department/manage/byCode/{code}": {
+    "name": "department-manage-byCode-{code}"
+  },
+  "/department/manage/check": {
+    "name": "department-manage-check"
+  },
+  "/department/manage/ext/{id}": {
+    "name": "department-manage-ext-{id}"
+  },
+  "/department/manage/search": {
+    "name": "department-manage-search"
+  },
+  "/department/manage/tree": {
+    "name": "department-manage-tree"
+  },
+  "/department/manage/{id}": {
+    "name": "department-manage-{id}"
+  },
+  "/department/search": {
+    "name": "department-search"
+  },
+  "/department/sync/search": {
+    "name": "department-sync-search"
+  },
+  "/department/sync/tree": {
+    "name": "department-sync-tree"
+  },
+  "/department/tree": {
+    "name": "department-tree"
+  },
+  "/department/yst": {
+    "name": "department-yst"
+  },
+  "/department/{id}": {
+    "name": "department-{id}"
+  },
+  "/departmentprojectref": {
+    "name": "departmentprojectref"
+  },
+  "/departmentprojectref/{id}": {
+    "name": "departmentprojectref-{id}"
+  },
+  "/employee": {
+    "name": "employee"
+  },
+  "/employee/batch-activate": {
+    "name": "employee-batch-activate"
+  },
+  "/employee/batch-deactivate": {
+    "name": "employee-batch-deactivate"
+  },
+  "/employee/batch-delete": {
+    "name": "employee-batch-delete"
+  },
+  "/employee/batch-edit": {
+    "name": "employee-batch-edit"
+  },
+  "/employee/batch-grant-project": {
+    "name": "employee-batch-grant-project"
+  },
+  "/employee/batch-remove": {
+    "name": "employee-batch-remove"
+  },
+  "/employee/current/modules": {
+    "name": "employee-current-modules"
+  },
+  "/employee/delete/{userId}": {
+    "name": "employee-delete-{userId}"
+  },
+  "/employee/edit/{userId}": {
+    "name": "employee-edit-{userId}"
+  },
+  "/employee/remove/{userId}": {
+    "name": "employee-remove-{userId}"
+  },
+  "/employee/reset-password": {
+    "name": "employee-reset-password"
+  },
+  "/employee/self": {
+    "name": "employee-self"
+  },
+  "/employee/simple": {
+    "name": "employee-simple"
+  },
+  "/employee/simple/active": {
+    "name": "employee-simple-active"
+  },
+  "/employee/third/bind/{employeeId}": {
+    "name": "employee-third-bind-{employeeId}"
+  },
+  "/employee/third/unbound/{employeeId}": {
+    "name": "employee-third-unbound-{employeeId}"
+  },
+  "/employee/update-password": {
+    "name": "employee-update-password"
+  },
+  "/employee/yst/sync": {
+    "name": "employee-yst-sync"
+  },
+  "/employee/{userId}": {
+    "name": "employee-{userId}"
+  },
+  "/employee/{userId}/avatar-info": {
+    "name": "employee-{userId}-avatar-info"
+  },
+  "/employee/{userId}/base-info": {
+    "name": "employee-{userId}-base-info"
+  },
+  "/employee/{userId}/bind-device": {
+    "name": "employee-{userId}-bind-device"
+  },
+  "/employee/{userId}/emno-info": {
+    "name": "employee-{userId}-emno-info"
+  },
+  "/employee/{userId}/name-info": {
+    "name": "employee-{userId}-name-info"
+  },
+  "/employee/{userId}/phone-info": {
+    "name": "employee-{userId}-phone-info"
+  },
+  "/employee/{userId}/unbind-device": {
+    "name": "employee-{userId}-unbind-device"
+  },
+  "/energy/consumption/record": {
+    "name": "energy-consumption-record"
+  },
+  "/energy/consumption/record/check": {
+    "name": "energy-consumption-record-check"
+  },
+  "/energy/consumption/record/export": {
+    "name": "energy-consumption-record-export"
+  },
+  "/energy/consumption/record/import": {
+    "name": "energy-consumption-record-import"
+  },
+  "/energy/consumption/record/report/statistics/month/unit/chain": {
+    "name": "energy-consumption-record-report-statistics-month-unit-chain"
+  },
+  "/energy/consumption/record/report/statistics/month/unit/chain/export": {
+    "name": "energy-consumption-record-report-statistics-month-unit-chain-export"
+  },
+  "/energy/consumption/record/report/statistics/projects": {
+    "name": "energy-consumption-record-report-statistics-projects"
+  },
+  "/energy/consumption/record/report/statistics/type": {
+    "name": "energy-consumption-record-report-statistics-type"
+  },
+  "/energy/consumption/record/report/statistics/unit/year-on-year": {
+    "name": "energy-consumption-record-report-statistics-unit-year-on-year"
+  },
+  "/energy/consumption/record/report/statistics/unit/year-on-year/export": {
+    "name": "energy-consumption-record-report-statistics-unit-year-on-year-export"
+  },
+  "/energy/consumption/record/report/statistics/year": {
+    "name": "energy-consumption-record-report-statistics-year"
+  },
+  "/energy/consumption/record/report/statistics/year/export": {
+    "name": "energy-consumption-record-report-statistics-year-export"
+  },
+  "/energy/consumption/record/template/export": {
+    "name": "energy-consumption-record-template-export"
+  },
+  "/energy/consumption/record/type": {
+    "name": "energy-consumption-record-type"
+  },
+  "/energy/consumption/record/{id}": {
+    "name": "energy-consumption-record-{id}"
+  },
+  "/enterprisemenu": {
+    "name": "enterprisemenu"
+  },
+  "/enterprisemenu/findAllMenus": {
+    "name": "enterprisemenu-findAllMenus"
+  },
+  "/facility": {
+    "name": "facility"
+  },
+  "/facility/component/{id}": {
+    "name": "facility-component-{id}"
+  },
+  "/facility/download": {
+    "name": "facility-download"
+  },
+  "/facility/id_by_qrcode": {
+    "name": "facility-id_by_qrcode"
+  },
+  "/facility/link": {
+    "name": "facility-link"
+  },
+  "/facility/overview": {
+    "name": "facility-overview"
+  },
+  "/facility/param/{id}": {
+    "name": "facility-param-{id}"
+  },
+  "/facility/qrcode/batch-download": {
+    "name": "facility-qrcode-batch-download"
+  },
+  "/facility/qrcode/download": {
+    "name": "facility-qrcode-download"
+  },
+  "/facility/ref/{facilityId}": {
+    "name": "facility-ref-{facilityId}"
+  },
+  "/facility/ref/{facilityId}/{refFacilityId}": {
+    "name": "facility-ref-{facilityId}-{refFacilityId}"
+  },
+  "/facility/ref/{id}": {
+    "name": "facility-ref-{id}"
+  },
+  "/facility/relation": {
+    "name": "facility-relation"
+  },
+  "/facility/workorder": {
+    "name": "facility-workorder"
+  },
+  "/facility/{id}": {
+    "name": "facility-{id}"
+  },
+  "/facilityType": {
+    "name": "facilityType"
+  },
+  "/facilityType/check": {
+    "name": "facilityType-check"
+  },
+  "/facilityType/find": {
+    "name": "facilityType-find"
+  },
+  "/facilityType/findAll": {
+    "name": "facilityType-findAll"
+  },
+  "/facilityType/relation": {
+    "name": "facilityType-relation"
+  },
+  "/facilityType/{id}": {
+    "name": "facilityType-{id}"
+  },
+  "/facilityTypeComponent": {
+    "name": "facilityTypeComponent"
+  },
+  "/facilityTypeComponent/queryById": {
+    "name": "facilityTypeComponent-queryById"
+  },
+  "/facilityTypeComponent/{id}": {
+    "name": "facilityTypeComponent-{id}"
+  },
+  "/facilityTypeParam": {
+    "name": "facilityTypeParam"
+  },
+  "/facilityTypeParam/queryById": {
+    "name": "facilityTypeParam-queryById"
+  },
+  "/facilityTypeParam/{id}": {
+    "name": "facilityTypeParam-{id}"
+  },
+  "/floor": {
+    "name": "floor"
+  },
+  "/floor/check-unique": {
+    "name": "floor-check-unique"
+  },
+  "/floor/searchByBuildingId": {
+    "name": "floor-searchByBuildingId"
+  },
+  "/floor/{id}": {
+    "name": "floor-{id}"
+  },
+  "/geo/searchByLevelAndParentId": {
+    "name": "geo-searchByLevelAndParentId"
+  },
+  "/healthz": {
+    "name": "healthz"
+  },
+  "/inbound": {
+    "name": "inbound"
+  },
+  "/inbound/material": {
+    "name": "inbound-material"
+  },
+  "/index/statistics": {
+    "name": "index-statistics"
+  },
+  "/index/statistics/project": {
+    "name": "index-statistics-project"
+  },
+  "/index/statistics/{startDate}": {
+    "name": "index-statistics-{startDate}"
+  },
+  "/inspect-plan": {
+    "name": "inspect-plan"
+  },
+  "/inspect-plan/copy/{id}": {
+    "name": "inspect-plan-copy-{id}"
+  },
+  "/inspect-plan/site": {
+    "name": "inspect-plan-site"
+  },
+  "/inspect-plan/site/{id}": {
+    "name": "inspect-plan-site-{id}"
+  },
+  "/inspect-plan/state/{id}": {
+    "name": "inspect-plan-state-{id}"
+  },
+  "/inspect-plan/{id}": {
+    "name": "inspect-plan-{id}"
+  },
+  "/inspect-site": {
+    "name": "inspect-site"
+  },
+  "/inspect-site/export/qrcode/batch": {
+    "name": "inspect-site-export-qrcode-batch"
+  },
+  "/inspect-site/export/qrcode/{id}": {
+    "name": "inspect-site-export-qrcode-{id}"
+  },
+  "/inspect-site/job": {
+    "name": "inspect-site-job"
+  },
+  "/inspect-site/job/content": {
+    "name": "inspect-site-job-content"
+  },
+  "/inspect-site/job/content/reorder/{id}": {
+    "name": "inspect-site-job-content-reorder-{id}"
+  },
+  "/inspect-site/job/content/{id}": {
+    "name": "inspect-site-job-content-{id}"
+  },
+  "/inspect-site/job/facility": {
+    "name": "inspect-site-job-facility"
+  },
+  "/inspect-site/job/facility/by_site_job": {
+    "name": "inspect-site-job-facility-by_site_job"
+  },
+  "/inspect-site/job/facility/reorder/{id}": {
+    "name": "inspect-site-job-facility-reorder-{id}"
+  },
+  "/inspect-site/job/facility/{id}": {
+    "name": "inspect-site-job-facility-{id}"
+  },
+  "/inspect-site/job/generate-template-content": {
+    "name": "inspect-site-job-generate-template-content"
+  },
+  "/inspect-site/job/template": {
+    "name": "inspect-site-job-template"
+  },
+  "/inspect-site/job/template/{id}": {
+    "name": "inspect-site-job-template-{id}"
+  },
+  "/inspect-site/job/{id}": {
+    "name": "inspect-site-job-{id}"
+  },
+  "/inspect-site/job/{id}/custom-content": {
+    "name": "inspect-site-job-{id}-custom-content"
+  },
+  "/inspect-site/job/{id}/facility": {
+    "name": "inspect-site-job-{id}-facility"
+  },
+  "/inspect-site/plan/job": {
+    "name": "inspect-site-plan-job"
+  },
+  "/inspect-site/sync": {
+    "name": "inspect-site-sync"
+  },
+  "/inspect-site/{id}": {
+    "name": "inspect-site-{id}"
+  },
+  "/inspect-task": {
+    "name": "inspect-task"
+  },
+  "/inspect-task/calendar": {
+    "name": "inspect-task-calendar"
+  },
+  "/inspect-task/content": {
+    "name": "inspect-task-content"
+  },
+  "/inspect-task/content/{id}": {
+    "name": "inspect-task-content-{id}"
+  },
+  "/inspect-task/content/{id}/detail": {
+    "name": "inspect-task-content-{id}-detail"
+  },
+  "/inspect-task/download": {
+    "name": "inspect-task-download"
+  },
+  "/inspect-task/exec": {
+    "name": "inspect-task-exec"
+  },
+  "/inspect-task/export": {
+    "name": "inspect-task-export"
+  },
+  "/inspect-task/facility": {
+    "name": "inspect-task-facility"
+  },
+  "/inspect-task/facility/{id}": {
+    "name": "inspect-task-facility-{id}"
+  },
+  "/inspect-task/handle": {
+    "name": "inspect-task-handle"
+  },
+  "/inspect-task/handle/situation": {
+    "name": "inspect-task-handle-situation"
+  },
+  "/inspect-task/handle/workorder": {
+    "name": "inspect-task-handle-workorder"
+  },
+  "/inspect-task/handle/{id}": {
+    "name": "inspect-task-handle-{id}"
+  },
+  "/inspect-task/history": {
+    "name": "inspect-task-history"
+  },
+  "/inspect-task/job": {
+    "name": "inspect-task-job"
+  },
+  "/inspect-task/job/exec": {
+    "name": "inspect-task-job-exec"
+  },
+  "/inspect-task/job/{id}": {
+    "name": "inspect-task-job-{id}"
+  },
+  "/inspect-task/job/{id}/patch": {
+    "name": "inspect-task-job-{id}-patch"
+  },
+  "/inspect-task/job/{id}/set-operator": {
+    "name": "inspect-task-job-{id}-set-operator"
+  },
+  "/inspect-task/job/{id}/submit": {
+    "name": "inspect-task-job-{id}-submit"
+  },
+  "/inspect-task/object": {
+    "name": "inspect-task-object"
+  },
+  "/inspect-task/object/{id}": {
+    "name": "inspect-task-object-{id}"
+  },
+  "/inspect-task/object/{id}/patch": {
+    "name": "inspect-task-object-{id}-patch"
+  },
+  "/inspect-task/object/{id}/submit": {
+    "name": "inspect-task-object-{id}-submit"
+  },
+  "/inspect-task/site": {
+    "name": "inspect-task-site"
+  },
+  "/inspect-task/site/jobs": {
+    "name": "inspect-task-site-jobs"
+  },
+  "/inspect-task/site/{id}": {
+    "name": "inspect-task-site-{id}"
+  },
+  "/inspect-task/submit/{id}": {
+    "name": "inspect-task-submit-{id}"
+  },
+  "/inspect-task/{id}": {
+    "name": "inspect-task-{id}"
+  },
+  "/inspect-template": {
+    "name": "inspect-template"
+  },
+  "/inspect-template/content": {
+    "name": "inspect-template-content"
+  },
+  "/inspect-template/content/reorder/{id}": {
+    "name": "inspect-template-content-reorder-{id}"
+  },
+  "/inspect-template/content/{id}": {
+    "name": "inspect-template-content-{id}"
+  },
+  "/inspect-template/{id}": {
+    "name": "inspect-template-{id}"
+  },
+  "/inspect-template/{template-id}/all-content": {
+    "name": "inspect-template-{template-id}-all-content"
+  },
+  "/inspect-template/{template-id}/content": {
+    "name": "inspect-template-{template-id}-content"
+  },
+  "/inspect/holiday": {
+    "name": "inspect-holiday"
+  },
+  "/inspect/holiday/{id}": {
+    "name": "inspect-holiday-{id}"
+  },
+  "/inspect/remind": {
+    "name": "inspect-remind"
+  },
+  "/inspect/remind/{id}": {
+    "name": "inspect-remind-{id}"
+  },
+  "/inspect/setting": {
+    "name": "inspect-setting"
+  },
+  "/inspecttaskremind": {
+    "name": "inspecttaskremind"
+  },
+  "/inspecttaskremind/{id}": {
+    "name": "inspecttaskremind-{id}"
+  },
+  "/inventory": {
+    "name": "inventory"
+  },
+  "/inventory/qrcode": {
+    "name": "inventory-qrcode"
+  },
+  "/inventory/{id}": {
+    "name": "inventory-{id}"
+  },
+  "/inventory/{id}/safe-stock": {
+    "name": "inventory-{id}-safe-stock"
+  },
+  "/log/update-level": {
+    "name": "log-update-level"
+  },
+  "/material": {
+    "name": "material"
+  },
+  "/material/{id}": {
+    "name": "material-{id}"
+  },
+  "/message": {
+    "name": "message"
+  },
+  "/message/approve": {
+    "name": "message-approve"
+  },
+  "/message/send": {
+    "name": "message-send"
+  },
+  "/message/send/count": {
+    "name": "message-send-count"
+  },
+  "/message/send/push/self": {
+    "name": "message-send-push-self"
+  },
+  "/message/send/read": {
+    "name": "message-send-read"
+  },
+  "/message/send/read/self": {
+    "name": "message-send-read-self"
+  },
+  "/message/send/self": {
+    "name": "message-send-self"
+  },
+  "/message/send/station/self": {
+    "name": "message-send-station-self"
+  },
+  "/message/send/unread-count/by-project": {
+    "name": "message-send-unread-count-by-project"
+  },
+  "/message/send/unread-count/by-tenant": {
+    "name": "message-send-unread-count-by-tenant"
+  },
+  "/message/send/unread-count/statistics": {
+    "name": "message-send-unread-count-statistics"
+  },
+  "/message/send/{id}": {
+    "name": "message-send-{id}"
+  },
+  "/message/{id}": {
+    "name": "message-{id}"
+  },
+  "/obstructed": {
+    "name": "obstructed"
+  },
+  "/obstructed/list": {
+    "name": "obstructed-list"
+  },
+  "/obstructed/page": {
+    "name": "obstructed-page"
+  },
+  "/offline-data/department/cache": {
+    "name": "offline-data-department-cache"
+  },
+  "/outbound": {
+    "name": "outbound"
+  },
+  "/outbound/material": {
+    "name": "outbound-material"
+  },
+  "/outboundmaterialsource": {
+    "name": "outboundmaterialsource"
+  },
+  "/outboundmaterialsource/{id}": {
+    "name": "outboundmaterialsource-{id}"
+  },
+  "/pm/maint": {
+    "name": "pm-maint"
+  },
+  "/pm/maint/app/plan/facilities": {
+    "name": "pm-maint-app-plan-facilities"
+  },
+  "/pm/maint/app/plan/statistics": {
+    "name": "pm-maint-app-plan-statistics"
+  },
+  "/pm/maint/facility": {
+    "name": "pm-maint-facility"
+  },
+  "/pm/maint/facility-type/facility": {
+    "name": "pm-maint-facility-type-facility"
+  },
+  "/pm/maint/{id}": {
+    "name": "pm-maint-{id}"
+  },
+  "/pm/maint/{id}/copy": {
+    "name": "pm-maint-{id}-copy"
+  },
+  "/pm/plan": {
+    "name": "pm-plan"
+  },
+  "/pm/plan/calendar": {
+    "name": "pm-plan-calendar"
+  },
+  "/pm/plan/detail": {
+    "name": "pm-plan-detail"
+  },
+  "/pm/plan/facility-type/facility": {
+    "name": "pm-plan-facility-type-facility"
+  },
+  "/pm/plan/gen-workorder": {
+    "name": "pm-plan-gen-workorder"
+  },
+  "/position": {
+    "name": "position"
+  },
+  "/position/byCode/{code}": {
+    "name": "position-byCode-{code}"
+  },
+  "/position/check": {
+    "name": "position-check"
+  },
+  "/position/search": {
+    "name": "position-search"
+  },
+  "/position/{id}": {
+    "name": "position-{id}"
+  },
+  "/project": {
+    "name": "project"
+  },
+  "/project-group": {
+    "name": "project-group"
+  },
+  "/project-group/{projectGroupId}": {
+    "name": "project-group-{projectGroupId}"
+  },
+  "/project-group/{sourceProjectGroupId}/transfer-to/{targetProjectGroupId}": {
+    "name": "project-group-{sourceProjectGroupId}-transfer-to-{targetProjectGroupId}"
+  },
+  "/project/demand-type-status/{demandTypeId}": {
+    "name": "project-demand-type-status-{demandTypeId}"
+  },
+  "/project/findSimple": {
+    "name": "project-findSimple"
+  },
+  "/project/group/tree": {
+    "name": "project-group-tree"
+  },
+  "/project/level": {
+    "name": "project-level"
+  },
+  "/project/level/{parentId}": {
+    "name": "project-level-{parentId}"
+  },
+  "/project/list": {
+    "name": "project-list"
+  },
+  "/project/list/property": {
+    "name": "project-list-property"
+  },
+  "/project/list/supplier": {
+    "name": "project-list-supplier"
+  },
+  "/project/ssp": {
+    "name": "project-ssp"
+  },
+  "/project/tree/simple": {
+    "name": "project-tree-simple"
+  },
+  "/project/user/permission/valid": {
+    "name": "project-user-permission-valid"
+  },
+  "/project/{id}": {
+    "name": "project-{id}"
+  },
+  "/project/{id}/user-number": {
+    "name": "project-{id}-user-number"
+  },
+  "/qrcode/generate": {
+    "name": "qrcode-generate"
+  },
+  "/qrcodedynamic": {
+    "name": "qrcodedynamic"
+  },
+  "/qrcodedynamic/refresh/fac": {
+    "name": "qrcodedynamic-refresh-fac"
+  },
+  "/qrcodedynamic/refresh/site": {
+    "name": "qrcodedynamic-refresh-site"
+  },
+  "/qrcodedynamic/{id}": {
+    "name": "qrcodedynamic-{id}"
+  },
+  "/qrcodedynamicbind": {
+    "name": "qrcodedynamicbind"
+  },
+  "/qrcodedynamicbind/{id}": {
+    "name": "qrcodedynamicbind-{id}"
+  },
+  "/space": {
+    "name": "space"
+  },
+  "/space/check-unique": {
+    "name": "space-check-unique"
+  },
+  "/space/searchByFloorId": {
+    "name": "space-searchByFloorId"
+  },
+  "/space/{id}": {
+    "name": "space-{id}"
+  },
+  "/stat/home": {
+    "name": "stat-home"
+  },
+  "/stat/inspect": {
+    "name": "stat-inspect"
+  },
+  "/system/setting": {
+    "name": "system-setting"
+  },
+  "/system/setting/config": {
+    "name": "system-setting-config"
+  },
+  "/system/setting/{id}": {
+    "name": "system-setting-{id}"
+  },
+  "/template": {
+    "name": "template"
+  },
+  "/template/content": {
+    "name": "template-content"
+  },
+  "/template/content/{id}": {
+    "name": "template-content-{id}"
+  },
+  "/template/param": {
+    "name": "template-param"
+  },
+  "/template/param/{id}": {
+    "name": "template-param-{id}"
+  },
+  "/template/{id}": {
+    "name": "template-{id}"
+  },
+  "/thirdpartysystemconfig": {
+    "name": "thirdpartysystemconfig"
+  },
+  "/thirdpartysystemconfig/{id}": {
+    "name": "thirdpartysystemconfig-{id}"
+  },
+  "/undertake/app/accepted/{taskId}": {
+    "name": "undertake-app-accepted-{taskId}"
+  },
+  "/undertake/app/checked/{objectId}/{objectType}": {
+    "name": "undertake-app-checked-{objectId}-{objectType}"
+  },
+  "/undertake/app/checked/{taskId}": {
+    "name": "undertake-app-checked-{taskId}"
+  },
+  "/undertake/app/statistics": {
+    "name": "undertake-app-statistics"
+  },
+  "/undertake/app/wait-accept": {
+    "name": "undertake-app-wait-accept"
+  },
+  "/undertake/app/wait-check": {
+    "name": "undertake-app-wait-check"
+  },
+  "/undertake/app/wait-check/statistics": {
+    "name": "undertake-app-wait-check-statistics"
+  },
+  "/undertake/app/{objectId}/{objectType}/contents": {
+    "name": "undertake-app-{objectId}-{objectType}-contents"
+  },
+  "/undertake/app/{taskId}/objects": {
+    "name": "undertake-app-{taskId}-objects"
+  },
+  "/undertake/task": {
+    "name": "undertake-task"
+  },
+  "/undertake/task/check-name": {
+    "name": "undertake-task-check-name"
+  },
+  "/undertake/task/facility/{id}/content": {
+    "name": "undertake-task-facility-{id}-content"
+  },
+  "/undertake/task/object/content/{objectId}/{objectType}": {
+    "name": "undertake-task-object-content-{objectId}-{objectType}"
+  },
+  "/undertake/task/site/{id}/content": {
+    "name": "undertake-task-site-{id}-content"
+  },
+  "/undertake/task/{taskId}": {
+    "name": "undertake-task-{taskId}"
+  },
+  "/undertake/template": {
+    "name": "undertake-template"
+  },
+  "/undertake/template/check-name": {
+    "name": "undertake-template-check-name"
+  },
+  "/undertake/template/content": {
+    "name": "undertake-template-content"
+  },
+  "/undertake/template/{templateId}": {
+    "name": "undertake-template-{templateId}"
+  },
+  "/user": {
+    "name": "user"
+  },
+  "/user/captcha": {
+    "name": "user-captcha"
+  },
+  "/user/login": {
+    "name": "user-login"
+  },
+  "/user/project-permission": {
+    "name": "user-project-permission"
+  },
+  "/user/project/permission": {
+    "name": "user-project-permission"
+  },
+  "/user/reset-password": {
+    "name": "user-reset-password"
+  },
+  "/warehouse": {
+    "name": "warehouse"
+  },
+  "/warehouse/all": {
+    "name": "warehouse-all"
+  },
+  "/warehouse/management/all": {
+    "name": "warehouse-management-all"
+  },
+  "/warehouse/shelf": {
+    "name": "warehouse-shelf"
+  },
+  "/warehouse/shelf/{id}": {
+    "name": "warehouse-shelf-{id}"
+  },
+  "/warehouse/{id}": {
+    "name": "warehouse-{id}"
+  },
+  "/work-team": {
+    "name": "work-team"
+  },
+  "/work-team/check": {
+    "name": "work-team-check"
+  },
+  "/work-team/tree": {
+    "name": "work-team-tree"
+  },
+  "/work-team/{workTeamId}": {
+    "name": "work-team-{workTeamId}"
+  },
+  "/work-team/{workTeamId}/worker": {
+    "name": "work-team-{workTeamId}-worker"
+  },
+  "/work-team/{workTeamId}/worker-reorder": {
+    "name": "work-team-{workTeamId}-worker-reorder"
+  },
+  "/work-team/{workTeamId}/worker/paged": {
+    "name": "work-team-{workTeamId}-worker-paged"
+  },
+  "/work-team/{workTeamId}/worker/{workTeamMemberId}": {
+    "name": "work-team-{workTeamId}-worker-{workTeamMemberId}"
+  },
+  "/work-team/{workTeamId}/worker/{workerId}/reorder": {
+    "name": "work-team-{workTeamId}-worker-{workerId}-reorder"
+  },
+  "/workorder": {
+    "name": "workorder"
+  },
+  "/workorder-app": {
+    "name": "workorder-app"
+  },
+  "/workorder-app/statistics": {
+    "name": "workorder-app-statistics"
+  },
+  "/workorder-app/suspending-executor": {
+    "name": "workorder-app-suspending-executor"
+  },
+  "/workorder-app/wait-approval": {
+    "name": "workorder-app-wait-approval"
+  },
+  "/workorder-app/wait-archive": {
+    "name": "workorder-app-wait-archive"
+  },
+  "/workorder-app/wait-dispatch": {
+    "name": "workorder-app-wait-dispatch"
+  },
+  "/workorder-app/wait-process": {
+    "name": "workorder-app-wait-process"
+  },
+  "/workorder-app/wait-process-executor": {
+    "name": "workorder-app-wait-process-executor"
+  },
+  "/workorder-app/wait-scramble": {
+    "name": "workorder-app-wait-scramble"
+  },
+  "/workorder-app/wait-transfer": {
+    "name": "workorder-app-wait-transfer"
+  },
+  "/workorder-app/{id}/transfer": {
+    "name": "workorder-app-{id}-transfer"
+  },
+  "/workorder-app/{workorderId}/addExecutor": {
+    "name": "workorder-app-{workorderId}-addExecutor"
+  },
+  "/workorder-app/{workorderId}/customer-sign": {
+    "name": "workorder-app-{workorderId}-customer-sign"
+  },
+  "/workorder-app/{workorderId}/scramble": {
+    "name": "workorder-app-{workorderId}-scramble"
+  },
+  "/workorder-app/{workorderId}/supervisor-sign": {
+    "name": "workorder-app-{workorderId}-supervisor-sign"
+  },
+  "/workorder-approval": {
+    "name": "workorder-approval"
+  },
+  "/workorder-approval/app/{workorderApprovalId}": {
+    "name": "workorder-approval-app-{workorderApprovalId}"
+  },
+  "/workorder-approval/approval/{id}": {
+    "name": "workorder-approval-approval-{id}"
+  },
+  "/workorder-approval/search": {
+    "name": "workorder-approval-search"
+  },
+  "/workorder-approval/workorder/status/{id}": {
+    "name": "workorder-approval-workorder-status-{id}"
+  },
+  "/workorder-approval/{id}": {
+    "name": "workorder-approval-{id}"
+  },
+  "/workorder-content": {
+    "name": "workorder-content"
+  },
+  "/workorder-content/{woId}": {
+    "name": "workorder-content-{woId}"
+  },
+  "/workorder-cost/{workorderCostId}": {
+    "name": "workorder-cost-{workorderCostId}"
+  },
+  "/workorder-cost/{workorderId}": {
+    "name": "workorder-cost-{workorderId}"
+  },
+  "/workorder-cost/{workorderId}/all": {
+    "name": "workorder-cost-{workorderId}-all"
+  },
+  "/workorder-cost/{workorderId}/sync-tool-cost": {
+    "name": "workorder-cost-{workorderId}-sync-tool-cost"
+  },
+  "/workorder-detail/app/{workorderId}": {
+    "name": "workorder-detail-app-{workorderId}"
+  },
+  "/workorder-detail/print/{workorderId}": {
+    "name": "workorder-detail-print-{workorderId}"
+  },
+  "/workorder-detail/{id}": {
+    "name": "workorder-detail-{id}"
+  },
+  "/workorder-evaluate/customer/{workorderId}": {
+    "name": "workorder-evaluate-customer-{workorderId}"
+  },
+  "/workorder-evaluate/pm/{workorderId}": {
+    "name": "workorder-evaluate-pm-{workorderId}"
+  },
+  "/workorder-facility": {
+    "name": "workorder-facility"
+  },
+  "/workorder-facility/{workorderFacId}": {
+    "name": "workorder-facility-{workorderFacId}"
+  },
+  "/workorder-facility/{workorderId}/batch-create": {
+    "name": "workorder-facility-{workorderId}-batch-create"
+  },
+  "/workorder-process/app/{woId}": {
+    "name": "workorder-process-app-{woId}"
+  },
+  "/workorder-process/progress/{woId}": {
+    "name": "workorder-process-progress-{woId}"
+  },
+  "/workorder-process/{woId}": {
+    "name": "workorder-process-{woId}"
+  },
+  "/workorder-space/{workorderId}": {
+    "name": "workorder-space-{workorderId}"
+  },
+  "/workorder-space/{workorderId}/{workorderSpaceId}": {
+    "name": "workorder-space-{workorderId}-{workorderSpaceId}"
+  },
+  "/workorder-space/{workorderSpaceId}": {
+    "name": "workorder-space-{workorderSpaceId}"
+  },
+  "/workorder-tool": {
+    "name": "workorder-tool"
+  },
+  "/workorder-tool/{workorderToolId}": {
+    "name": "workorder-tool-{workorderToolId}"
+  },
+  "/workorder/batch": {
+    "name": "workorder-batch"
+  },
+  "/workorder/by-facId/{facId}": {
+    "name": "workorder-by-facId-{facId}"
+  },
+  "/workorder/config/event": {
+    "name": "workorder-config-event"
+  },
+  "/workorder/config/satisfaction": {
+    "name": "workorder-config-satisfaction"
+  },
+  "/workorder/config/satisfaction/init": {
+    "name": "workorder-config-satisfaction-init"
+  },
+  "/workorder/config/satisfaction/{id}": {
+    "name": "workorder-config-satisfaction-{id}"
+  },
+  "/workorder/config/status": {
+    "name": "workorder-config-status"
+  },
+  "/workorder/export": {
+    "name": "workorder-export"
+  },
+  "/workorder/hasUnArchive": {
+    "name": "workorder-hasUnArchive"
+  },
+  "/workorder/pm": {
+    "name": "workorder-pm"
+  },
+  "/workorder/pm/approval/search": {
+    "name": "workorder-pm-approval-search"
+  },
+  "/workorder/pm/config/status": {
+    "name": "workorder-pm-config-status"
+  },
+  "/workorder/pm/export": {
+    "name": "workorder-pm-export"
+  },
+  "/workorder/pm/statistics": {
+    "name": "workorder-pm-statistics"
+  },
+  "/workorder/pm/suspending-executor": {
+    "name": "workorder-pm-suspending-executor"
+  },
+  "/workorder/pm/tracing": {
+    "name": "workorder-pm-tracing"
+  },
+  "/workorder/pm/wait-approval": {
+    "name": "workorder-pm-wait-approval"
+  },
+  "/workorder/pm/wait-archive": {
+    "name": "workorder-pm-wait-archive"
+  },
+  "/workorder/pm/wait-dispatch": {
+    "name": "workorder-pm-wait-dispatch"
+  },
+  "/workorder/pm/wait-process": {
+    "name": "workorder-pm-wait-process"
+  },
+  "/workorder/pm/wait-process-executor": {
+    "name": "workorder-pm-wait-process-executor"
+  },
+  "/workorder/pm/{workorderId}/update-pm-step": {
+    "name": "workorder-pm-{workorderId}-update-pm-step"
+  },
+  "/workorder/priority/batch-save": {
+    "name": "workorder-priority-batch-save"
+  },
+  "/workorder/priority/by-name/{name}": {
+    "name": "workorder-priority-by-name-{name}"
+  },
+  "/workorder/priority/download": {
+    "name": "workorder-priority-download"
+  },
+  "/workorder/priority/search": {
+    "name": "workorder-priority-search"
+  },
+  "/workorder/priority/{id}": {
+    "name": "workorder-priority-{id}"
+  },
+  "/workorder/service-type": {
+    "name": "workorder-service-type"
+  },
+  "/workorder/service-type-ref/download": {
+    "name": "workorder-service-type-ref-download"
+  },
+  "/workorder/service-type-ref/search": {
+    "name": "workorder-service-type-ref-search"
+  },
+  "/workorder/service-type-ref/sla-status/search": {
+    "name": "workorder-service-type-ref-sla-status-search"
+  },
+  "/workorder/service-type-ref/sync": {
+    "name": "workorder-service-type-ref-sync"
+  },
+  "/workorder/service-type-ref/sync-status/search": {
+    "name": "workorder-service-type-ref-sync-status-search"
+  },
+  "/workorder/service-type-ref/{id}": {
+    "name": "workorder-service-type-ref-{id}"
+  },
+  "/workorder/service-type/by-code/{code}": {
+    "name": "workorder-service-type-by-code-{code}"
+  },
+  "/workorder/service-type/check": {
+    "name": "workorder-service-type-check"
+  },
+  "/workorder/service-type/search": {
+    "name": "workorder-service-type-search"
+  },
+  "/workorder/service-type/sla-status/search": {
+    "name": "workorder-service-type-sla-status-search"
+  },
+  "/workorder/service-type/{id}": {
+    "name": "workorder-service-type-{id}"
+  },
+  "/workorder/simple-transfer/{id}": {
+    "name": "workorder-simple-transfer-{id}"
+  },
+  "/workorder/sla": {
+    "name": "workorder-sla"
+  },
+  "/workorder/sla/batch-match": {
+    "name": "workorder-sla-batch-match"
+  },
+  "/workorder/sla/download": {
+    "name": "workorder-sla-download"
+  },
+  "/workorder/sla/match": {
+    "name": "workorder-sla-match"
+  },
+  "/workorder/sla/search": {
+    "name": "workorder-sla-search"
+  },
+  "/workorder/sla/simple/search": {
+    "name": "workorder-sla-simple-search"
+  },
+  "/workorder/sla/{id}": {
+    "name": "workorder-sla-{id}"
+  },
+  "/workorder/status-info/{workorderId}": {
+    "name": "workorder-status-info-{workorderId}"
+  },
+  "/workorder/tracing": {
+    "name": "workorder-tracing"
+  },
+  "/workorder/{id}": {
+    "name": "workorder-{id}"
+  },
+  "/workorder/{id}/accept": {
+    "name": "workorder-{id}-accept"
+  },
+  "/workorder/{id}/addExecutor": {
+    "name": "workorder-{id}-addExecutor"
+  },
+  "/workorder/{id}/archive": {
+    "name": "workorder-{id}-archive"
+  },
+  "/workorder/{id}/batch-transfer": {
+    "name": "workorder-{id}-batch-transfer"
+  },
+  "/workorder/{id}/check": {
+    "name": "workorder-{id}-check"
+  },
+  "/workorder/{id}/complete": {
+    "name": "workorder-{id}-complete"
+  },
+  "/workorder/{id}/continue": {
+    "name": "workorder-{id}-continue"
+  },
+  "/workorder/{id}/dispatch": {
+    "name": "workorder-{id}-dispatch"
+  },
+  "/workorder/{id}/refund": {
+    "name": "workorder-{id}-refund"
+  },
+  "/workorder/{id}/suspend": {
+    "name": "workorder-{id}-suspend"
+  },
+  "/workorder/{id}/termination": {
+    "name": "workorder-{id}-termination"
+  },
+  "/workorder/{id}/transfer": {
+    "name": "workorder-{id}-transfer"
+  },
+  "/workorder/{workorderId}/worker": {
+    "name": "workorder-{workorderId}-worker"
+  }
+}

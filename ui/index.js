@@ -17,16 +17,22 @@ export default api => {
   function PluginPanel() {
     const [pathList, setPathList] = useState([]);
     const [currentPath, setCurrentPath] = useState(undefined);
+    const [pathHash, setPathHash] = useState({});
     const { callRemote } = api;
     useEffect(() => {
       callRemote({
         type: "org.alexzeng.umi-plugin-swagger-doc.getSwaggerData"
       }).then(({ data }) => {
         setPathList(data);
+        const pathHashFinal = {};
+        data?.forEach(item => {
+          const { targetPath, path } = item;
+          pathHashFinal[path] = targetPath;
+        });
+        setPathHash(pathHashFinal);
       });
     }, []);
 
-    const [pathHash, setPathHash] = useState({});
     const { current: onPathChange } = useRef((route, path) => {
       setPathHash(pathHashCurrent => {
         pathHashCurrent[path] = route;

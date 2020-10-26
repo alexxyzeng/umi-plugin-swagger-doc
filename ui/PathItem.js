@@ -3,8 +3,8 @@ import { Collapse, Tag, Row, Input, Button, message } from "antd";
 import "./index.css";
 
 function PathItem({ method, onRename, path }) {
-  const { methodName, operationId, summary, tagDesc } = method;
-  const [id, setId] = useState(operationId);
+  const { methodName, operationId, summary, tagDesc, name } = method;
+  const [id, setId] = useState(name);
   const { current: onIdChange } = useRef(event => {
     setId(event.target.value);
   });
