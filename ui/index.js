@@ -4,11 +4,19 @@ import PathItem from "./PathItem";
 import "./index.css";
 import PathHeader from "./PathHeader";
 import PathConfig from "./PathConfig";
+
+// import { IUiApi } from "umi-types";
+
 const { Panel } = Collapse;
 
+/**
+ *
+ * @param {IUiApi} api
+ */
 export default api => {
   function PluginPanel() {
     const [pathList, setPathList] = useState([]);
+    const [currentPath, setCurrentPath] = useState(undefined);
     const { callRemote } = api;
     useEffect(() => {
       callRemote({
@@ -21,13 +29,38 @@ export default api => {
     const [pathHash, setPathHash] = useState({});
     const { current: onPathChange } = useRef((route, path) => {
       setPathHash(pathHashCurrent => {
-        pathHashCurrent[route] = path;
+        pathHashCurrent[path] = route;
         return { ...pathHashCurrent };
       });
     });
+
+    const { current: onGenerate } = useRef((pathItem, path, fileName) => {
+      callRemote({
+        type: "org.alexzeng.umi-plugin-swagger-doc.generateService",
+        payload: {
+          pathItem,
+          path,
+          fileName,
+          names: methodNameRef.current[pathItem.path]
+        }
+      }).then(({ data }) => {
+        // setPathList(data);
+      });
+    });
+
+    const methodNameRef = useRef({});
+
+    const { current: onRename } = useRef((method, id, path) => {
+      const { operationId } = method;
+      if (!methodNameRef.current[path]) {
+        methodNameRef.current[path] = {};
+      }
+      methodNameRef.current[path][operationId] = id;
+    });
+
     return (
       <div style={{ padding: 20, overflow: "scroll" }}>
-        <Collapse onChange={console.log}>
+        <Collapse value={currentPath} onChange={setCurrentPath}>
           {pathList.map(pathItem => {
             const { path, methods, tag } = pathItem;
             return (
@@ -36,7 +69,7 @@ export default api => {
                   pathItem={pathItem}
                   onChange={onPathChange}
                   value={pathHash[path]}
-                  onGenerate={console.log}
+                  onGenerate={onGenerate}
                 />
                 {methods.map(method => {
                   const { methodName, operationId, summary, tagDesc } = method;
@@ -45,7 +78,7 @@ export default api => {
                       key={operationId}
                       method={method}
                       path={path}
-                      onGenerate={console.log}
+                      onRename={onRename}
                     />
                   );
                 })}

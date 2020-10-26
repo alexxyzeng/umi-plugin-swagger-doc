@@ -1,11 +1,10 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import { Button, Row, Select, Input } from "antd";
 
 const { Option } = Select;
 
 function PathHeader({ pathItem, onChange, value, onGenerate }) {
   const { path, tag, routes } = pathItem;
-  console.log(pathItem, "---- path item");
   const { current: onRouteChange } = useRef(route => {
     onChange(route, path);
   });
@@ -14,6 +13,10 @@ function PathHeader({ pathItem, onChange, value, onGenerate }) {
   const { current: onFileNameChange } = useRef(event => {
     setFileName(event.target.value);
   });
+
+  const onGenerateService = useCallback(() => {
+    onGenerate(pathItem, value, fileName);
+  }, [pathItem, fileName, onGenerate, value]);
 
   return (
     <Row justify="start">
@@ -39,7 +42,9 @@ function PathHeader({ pathItem, onChange, value, onGenerate }) {
         />
       </div>
       <div>
-        <Button onClick={onGenerate}>生成Service</Button>
+        <Button type="primary" onClick={onGenerateService}>
+          生成Service
+        </Button>
       </div>
     </Row>
   );

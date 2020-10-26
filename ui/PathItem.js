@@ -2,22 +2,22 @@ import { useState, useRef, useCallback } from "react";
 import { Collapse, Tag, Row, Input, Button, message } from "antd";
 import "./index.css";
 
-function PathItem({ method, onGenerate, path }) {
+function PathItem({ method, onRename, path }) {
   const { methodName, operationId, summary, tagDesc } = method;
   const [id, setId] = useState(operationId);
   const { current: onIdChange } = useRef(event => {
     setId(event.target.value);
   });
 
-  const onRename = useCallback(() => {
-    if (!onGenerate) {
+  const onRenameMethod = useCallback(() => {
+    if (!onRename) {
       return;
     }
     if (!id) {
       return message.error("请输入修改后的名称");
     }
-    onGenerate(method, id, path);
-  }, [id, onGenerate]);
+    onRename(method, id, path);
+  }, [id, onRename, onRename]);
 
   return (
     <Row align="middle">
@@ -34,7 +34,7 @@ function PathItem({ method, onGenerate, path }) {
         <Input prefix="方法名" value={id} onChange={onIdChange} />
       </div>
       <div>
-        <Button onClick={onRename}>重命名</Button>
+        <Button onClick={onRenameMethod}>重命名</Button>
       </div>
     </Row>
   );

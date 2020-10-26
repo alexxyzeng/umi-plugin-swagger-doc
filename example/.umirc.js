@@ -13,7 +13,11 @@ export default {
         // mock数据路径
         mockPath: resolve(__dirname, "mock"),
         // enum数据路径
-        enumPath: resolve(__dirname, "enum")
+        enumPath: resolve(__dirname, "enum"),
+        // pages路径
+        pagePath: resolve(__dirname, "src", "pages"),
+        // service文件路径
+        serviceTag: "service"
       }
     ]
   ]

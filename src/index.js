@@ -3,10 +3,18 @@
 // import { IApi } from "umi-types";
 import fs from "fs";
 import path from "path";
-import { swaggerDocPath, generateFiles } from "swagger-to-jsdoc";
+import { swaggerDocPath, generateFile } from "swagger-to-jsdoc";
 import fetch from "node-fetch";
 
 let routeList = new Set();
+
+global.definitions = {};
+
+const methods = {
+  getSwaggerData,
+  generateService
+};
+
 /**
  *
  * @param {IApi} api
@@ -16,20 +24,26 @@ export default function(api, options) {
   // Example: output the webpack config
   api.addUIPlugin(require.resolve("../dist/index.umd"));
   api.onUISocket(({ action, failure, success }) => {
-    if (action.type === "org.alexzeng.umi-plugin-swagger-doc.getSwaggerData") {
-      getSwaggerData(api, options, success);
+    const { type, payload } = action;
+    if (!type.startsWith("org.alexzeng.umi-plugin-swagger-doc")) {
+      return;
+    }
+    const subType = type.replace("org.alexzeng.umi-plugin-swagger-doc.", "");
+    if (subType === "getSwaggerData") {
+      getSwaggerData(api, options, payload, success);
+    } else if (subType === "generateService") {
+      generateService(api, options, payload, success);
     }
   });
   api.modifyRoutes(routes => {
     routeList = new Set();
-    console.log(routes, "--- modified routes");
     fs.writeFileSync("./routes.json", JSON.stringify(routes, null, 2));
     recursiveParseRoutes(routes);
     return routes;
   });
 }
 
-function getSwaggerData(api, options, success, failure) {
+function getSwaggerData(api, options, payload, success, failure) {
   const {
     swaggerUrl,
     swaggerDocPath,
@@ -46,6 +60,7 @@ function getSwaggerData(api, options, success, failure) {
     .then(res => res.json())
     .then(json => {
       const { paths, definitions, tags } = json;
+      global.definitions = definitions;
       let result = [];
       const tagHash = {};
       tags?.forEach(tag => {
@@ -86,6 +101,11 @@ function getSwaggerData(api, options, success, failure) {
       // fs.writeFileSync(definitionUrl, JSON.stringify(definitions, null, 2));
       // generateFiles(paths, definitions, undefined, []);
     });
+}
+
+function generateService(api, options, payload, success, failure) {
+  const { pathItem, fileName, names } = payload;
+  generateFile(payload, global.definitions, undefined, options);
 }
 
 function recursiveParseRoutes(routes) {
