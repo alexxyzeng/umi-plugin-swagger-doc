@@ -6,7 +6,9 @@ function PathItem({ method, onRename, path }) {
   const { methodName, operationId, summary, tagDesc, name } = method;
   const [id, setId] = useState(name);
   const { current: onIdChange } = useRef(event => {
-    setId(event.target.value);
+    const id = event.target.value;
+    setId(id);
+    onRename(method, id, path);
   });
 
   const onRenameMethod = useCallback(() => {
@@ -33,9 +35,9 @@ function PathItem({ method, onRename, path }) {
       <div>
         <Input prefix="方法名" value={id} onChange={onIdChange} />
       </div>
-      <div>
+      {/* <div>
         <Button onClick={onRenameMethod}>重命名</Button>
-      </div>
+      </div> */}
     </Row>
   );
 }

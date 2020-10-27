@@ -642,5 +642,6 @@
   "suspendUsingPUT": "suspendUsingPUT",
   "terminationUsingPUT": "terminationUsingPUT",
   "transferUsingPUT_1": "transferUsingPUT_1",
-  "findWorkerUsingGET": "findWorkerUsingGET"
+  "findWorkerUsingGET": "findWorkerUsingGET",
+  "exportUsingGET_4": "exportUsingGET_4"
 }

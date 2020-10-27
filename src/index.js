@@ -135,14 +135,36 @@ function getSwaggerData(api, options, payload, success, failure) {
 
 function generateService(api, options, payload, success, failure) {
   const { pathItem, fileName, names, path: pathUrl } = payload;
-  generateFile(payload, global.definitions, undefined, options);
 
-  const { configPath } = options;
+  const { configPath, pagePath, serviceTag, mockPath } = options;
   const serviceConfigPath = resolve(configPath, serviceConfigName);
   const serviceConfig = JSON.parse(
     fs.readFileSync(serviceConfigPath, "utf-8") || "{}"
   );
   const { path } = pathItem;
+  // TODO: 移除之前的记录
+  const prevConfig = serviceConfig[path];
+  console.log(prevConfig, "---- prevConfig");
+  if (prevConfig) {
+    const { path: prevPath, name: prevName } = prevConfig;
+    if (!prevPath || !prevName) {
+      return;
+    }
+    const prevServicePath = resolve(
+      `${pagePath}${prevPath}/${serviceTag}`,
+      `${prevName}.js`
+    );
+
+    if (fs.existsSync(prevServicePath)) {
+      fs.unlinkSync(prevServicePath);
+    }
+
+    const prevMockPath = resolve(mockPath, `${prevName}.js`);
+    if (fs.existsSync(prevMockPath)) {
+      fs.unlinkSync(prevMockPath);
+    }
+  }
+  generateFile(payload, global.definitions, undefined, options);
   serviceConfig[path] = { path: pathUrl, name: fileName };
   fs.writeFileSync(serviceConfigPath, JSON.stringify(serviceConfig, null, 2));
 

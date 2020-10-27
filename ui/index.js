@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, Fragment } from "react";
 import { Button, Collapse } from "antd";
 import PathItem from "./PathItem";
 import "./index.css";
@@ -96,10 +96,36 @@ export default api => {
     );
   }
 
+  function EnumPanel() {
+    const [enumList, setEnumList] = useState([]);
+    const { current: onGenerate } = useRef(() => {
+      callRemote({
+        type: "org.alexzeng.umi-plugin-swagger-doc.generateEnums"
+      }).then(({ data }) => {
+        setEnumList(data);
+      });
+    });
+
+    return (
+      <Fragment>
+        <Row>
+          <Button onClick={onGenerate}>生成Enum</Button>
+        </Row>
+      </Fragment>
+    );
+  }
+
   api.addPanel({
-    title: "umi-plugin-swagger-doc",
-    path: "/umi-plugin-swagger-doc",
+    title: "Swagger service",
+    path: "/services",
     icon: "home",
     component: PluginPanel
+  });
+
+  api.addPanel({
+    title: "Enums",
+    path: "/enums",
+    icon: "home",
+    component: EnumPanel
   });
 };

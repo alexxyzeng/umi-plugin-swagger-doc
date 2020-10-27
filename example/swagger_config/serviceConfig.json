@@ -1403,5 +1403,8 @@
   },
   "/workorder/{workorderId}/worker": {
     "name": "workorder-{workorderId}-worker"
+  },
+  "/facility/export": {
+    "name": "facility-export"
   }
 }

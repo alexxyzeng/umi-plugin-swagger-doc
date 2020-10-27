@@ -28,19 +28,9 @@ const routes = [
         component: require('../user/home/index.js').default,
       },
       {
-        path: '/user/home/service/appIndex',
-        exact: true,
-        component: require('../user/home/service/appIndex.js').default,
-      },
-      {
         path: '/user',
         exact: true,
         component: require('../user/index.js').default,
-      },
-      {
-        path: '/user/service/appIndex',
-        exact: true,
-        component: require('../user/service/appIndex.js').default,
       },
       {
         path: '/third',
