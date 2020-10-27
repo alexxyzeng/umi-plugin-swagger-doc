@@ -1,9 +1,10 @@
 import { useEffect, useState, useRef, Fragment } from "react";
-import { Button, Collapse } from "antd";
+import { Button, Collapse, Row } from "antd";
 import PathItem from "./PathItem";
 import "./index.css";
 import PathHeader from "./PathHeader";
 import PathConfig from "./PathConfig";
+import EnumItem from "./EnumItem";
 
 // import { IUiApi } from "umi-types";
 
@@ -14,11 +15,12 @@ const { Panel } = Collapse;
  * @param {IUiApi} api
  */
 export default api => {
+  const { callRemote } = api;
   function PluginPanel() {
     const [pathList, setPathList] = useState([]);
     const [currentPath, setCurrentPath] = useState(undefined);
     const [pathHash, setPathHash] = useState({});
-    const { callRemote } = api;
+
     useEffect(() => {
       callRemote({
         type: "org.alexzeng.umi-plugin-swagger-doc.getSwaggerData"
@@ -98,19 +100,56 @@ export default api => {
 
   function EnumPanel() {
     const [enumList, setEnumList] = useState([]);
+    const [enumHash, setEnumHash] = useState({});
+    const enumHashRef = useRef(enumHash);
+    useEffect(() => {
+      onGenerate();
+    }, []);
+
+    useEffect(() => {
+      enumHashRef.current = enumHash;
+    }, [enumHash]);
     const { current: onGenerate } = useRef(() => {
       callRemote({
-        type: "org.alexzeng.umi-plugin-swagger-doc.generateEnums"
+        type: "org.alexzeng.umi-plugin-swagger-doc.generateEnums",
+        payload: { ...enumHashRef.current }
       }).then(({ data }) => {
-        setEnumList(data);
+        let enumList = [];
+        for (let enumKey in data) {
+          const enumValue = data[enumKey];
+          enumList.push({ defaultValue: enumValue, enumKey });
+        }
+        setEnumList(enumList);
       });
+    });
+
+    const { current: onEnumChange } = useRef((name, key) => {
+      enumHashRef.current[key] = name;
+      setEnumHash({ ...enumHashRef.current });
     });
 
     return (
       <Fragment>
         <Row>
-          <Button onClick={onGenerate}>生成Enum</Button>
+          <div>
+            <Button typee="primary" onClick={onGenerate}>
+              生成Enum
+            </Button>
+          </div>
         </Row>
+        {enumList.map(item => {
+          const { defaultValue, enumKey } = item;
+          const name = enumHash[enumKey];
+          return (
+            <EnumItem
+              key={enumKey}
+              name={name}
+              enumKey={enumKey}
+              defaultValue={defaultValue}
+              onChange={onEnumChange}
+            />
+          );
+        })}
       </Fragment>
     );
   }

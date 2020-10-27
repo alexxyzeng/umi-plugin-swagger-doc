@@ -3,7 +3,7 @@
 // import { IApi } from "umi-types";
 import fs from "fs";
 import { resolve } from "path";
-import { swaggerDocPath, generateFile } from "swagger-to-jsdoc";
+import { swaggerDocPath, generateFile, generateEnums } from "swagger-to-jsdoc";
 import fetch from "node-fetch";
 
 let routeList = new Set();
@@ -33,6 +33,8 @@ export default function(api, options) {
       getSwaggerData(api, options, payload, success);
     } else if (subType === "generateService") {
       generateService(api, options, payload, success);
+    } else if (subType === "generateEnums") {
+      getEnums(api, options, payload, success);
     }
   });
   api.modifyRoutes(routes => {
@@ -144,7 +146,6 @@ function generateService(api, options, payload, success, failure) {
   const { path } = pathItem;
   // TODO: 移除之前的记录
   const prevConfig = serviceConfig[path];
-  console.log(prevConfig, "---- prevConfig");
   if (prevConfig) {
     const { path: prevPath, name: prevName } = prevConfig;
     if (!prevPath || !prevName) {
@@ -186,4 +187,36 @@ function recursiveParseRoutes(routes) {
       recursiveParseRoutes(subRoutes);
     }
   });
+}
+
+function getEnums(api, options, payload, success) {
+  const {
+    swaggerUrl,
+    swaggerDocPath,
+    configPath,
+    mockPath,
+    enumPath,
+    enumConfigName
+  } = options;
+  const enumConfigPath = resolve(configPath, enumConfigName);
+  if (!fs.existsSync(configPath)) {
+    fs.mkdirSync(configPath);
+  }
+  if (!fs.existsSync(enumPath)) {
+    fs.mkdirSync(enumPath);
+  }
+  fetch(`${swaggerUrl}/${swaggerDocPath}`)
+    .then(res => res.json())
+    .then(json => {
+      const { paths, definitions, tags } = json;
+      global.definitions = definitions;
+      generateEnums(paths, definitions, options, payload);
+      if (fs.existsSync(enumConfigPath)) {
+        const enumConfig =
+          JSON.parse(fs.readFileSync(enumConfigPath, "utf-8") || "{}") || {};
+        success({ data: enumConfig });
+      } else {
+        success({ data: {} });
+      }
+    });
 }

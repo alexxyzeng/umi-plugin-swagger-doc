@@ -17,7 +17,9 @@ export default {
         // pages路径
         pagePath: resolve(__dirname, "src", "pages"),
         // service文件路径
-        serviceTag: "service"
+        serviceTag: "service",
+        // 枚举名称config
+        enumConfigName: "enumNameConfig.json"
       }
     ]
   ]
