@@ -198,6 +198,7 @@ function getEnums(api, options, payload, success) {
     enumPath,
     enumConfigName
   } = options;
+  console.log(payload, "---- payload");
   const enumConfigPath = resolve(configPath, enumConfigName);
   if (!fs.existsSync(configPath)) {
     fs.mkdirSync(configPath);

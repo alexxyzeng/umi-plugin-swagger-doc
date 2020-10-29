@@ -1,5 +1,5 @@
 {
-  "appIndexUsingGET": "getAppIndex",
+  "appIndexUsingGET": "getApp",
   "offlineDataHasUpdateUsingGET": "offlineDataHasUpdateUsingGET",
   "executeImportAndReturnFailUsingPOST": "executeImportAndReturnFailUsingPOST",
   "createUsingPOST": "createUsingPOST",

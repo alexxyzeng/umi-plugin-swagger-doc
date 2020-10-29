@@ -19,7 +19,9 @@ export default {
         // service文件路径
         serviceTag: "service",
         // 枚举名称config
-        enumConfigName: "enumNameConfig.json"
+        enumConfigName: "enumNameConfig.json",
+        // service前缀
+        servicePrefix: ""
       }
     ]
   ]
