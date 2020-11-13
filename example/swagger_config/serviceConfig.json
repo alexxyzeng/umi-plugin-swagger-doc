@@ -1406,5 +1406,477 @@
   },
   "/facility/export": {
     "name": "facility-export"
+  },
+  "/am-building-map/building-info": {
+    "name": "am-building-map-building-info"
+  },
+  "/am-building-map/geo-data": {
+    "name": "am-building-map-geo-data"
+  },
+  "/am-building-map/partition-and-point": {
+    "name": "am-building-map-partition-and-point"
+  },
+  "/am/budget/decision/line-1": {
+    "name": "am-budget-decision-line-1"
+  },
+  "/am/budget/decision/line-2": {
+    "name": "am-budget-decision-line-2"
+  },
+  "/am/budget/decision/line-3": {
+    "name": "am-budget-decision-line-3"
+  },
+  "/am/budget/decision/line-4": {
+    "name": "am-budget-decision-line-4"
+  },
+  "/am/budget/decision/line-5": {
+    "name": "am-budget-decision-line-5"
+  },
+  "/am/budget/drive/line-1": {
+    "name": "am-budget-drive-line-1"
+  },
+  "/am/budget/drive/others": {
+    "name": "am-budget-drive-others"
+  },
+  "/am/building/decision/line1": {
+    "name": "am-building-decision-line1"
+  },
+  "/am/building/decision/line3": {
+    "name": "am-building-decision-line3"
+  },
+  "/am/building/decision/line4": {
+    "name": "am-building-decision-line4"
+  },
+  "/am/building/decision/line5": {
+    "name": "am-building-decision-line5"
+  },
+  "/am/building/decision/line7": {
+    "name": "am-building-decision-line7"
+  },
+  "/am/building/decision/line8": {
+    "name": "am-building-decision-line8"
+  },
+  "/am/building/drive/line-1": {
+    "name": "am-building-drive-line-1"
+  },
+  "/am/building/drive/others": {
+    "name": "am-building-drive-others"
+  },
+  "/am/rev/decision/line-1": {
+    "name": "am-rev-decision-line-1"
+  },
+  "/am/rev/decision/line-2": {
+    "name": "am-rev-decision-line-2"
+  },
+  "/am/rev/decision/line-3": {
+    "name": "am-rev-decision-line-3"
+  },
+  "/am/rev/decision/line-4": {
+    "name": "am-rev-decision-line-4"
+  },
+  "/am/rev/drive/line-1": {
+    "name": "am-rev-drive-line-1"
+  },
+  "/am/rev/drive/others": {
+    "name": "am-rev-drive-others"
+  },
+  "/amap/regeo": {
+    "name": "amap-regeo"
+  },
+  "/budget/decision": {
+    "name": "budget-decision"
+  },
+  "/budget/exec/month": {
+    "name": "budget-exec-month"
+  },
+  "/budget/period": {
+    "name": "budget-period"
+  },
+  "/budget/summary": {
+    "name": "budget-summary"
+  },
+  "/budget/summary/expand": {
+    "name": "budget-summary-expand"
+  },
+  "/data-center/job-test/am/import": {
+    "name": "data-center-job-test-am-import"
+  },
+  "/data-center/job-test/data-center": {
+    "name": "data-center-job-test-data-center"
+  },
+  "/data-center/job-test/fm-wide-import-job": {
+    "name": "data-center-job-test-fm-wide-import-job"
+  },
+  "/data-center/job-test/fm-wide-index-import-job": {
+    "name": "data-center-job-test-fm-wide-index-import-job"
+  },
+  "/data-center/job-test/fm/operate/import": {
+    "name": "data-center-job-test-fm-operate-import"
+  },
+  "/data-center/job-test/monthly-import": {
+    "name": "data-center-job-test-monthly-import"
+  },
+  "/data-export/am-space/allocation": {
+    "name": "data-export-am-space-allocation"
+  },
+  "/data-export/am-space/management": {
+    "name": "data-export-am-space-management"
+  },
+  "/data-export/am-space/planning": {
+    "name": "data-export-am-space-planning"
+  },
+  "/data-export/building/planning": {
+    "name": "data-export-building-planning"
+  },
+  "/data-export/fin-budget/summary": {
+    "name": "data-export-fin-budget-summary"
+  },
+  "/data-export/fm/index-stat": {
+    "name": "data-export-fm-index-stat"
+  },
+  "/data-export/revolve/bed-allocation-details": {
+    "name": "data-export-revolve-bed-allocation-details"
+  },
+  "/data-export/revolve/bed-management-details": {
+    "name": "data-export-revolve-bed-management-details"
+  },
+  "/data-export/revolve/bud-stat-summary": {
+    "name": "data-export-revolve-bud-stat-summary"
+  },
+  "/data-export/revolve/community-monthly-details": {
+    "name": "data-export-revolve-community-monthly-details"
+  },
+  "/data-export/revolve/eu-summary": {
+    "name": "data-export-revolve-eu-summary"
+  },
+  "/data-export/revolve/leader/detail": {
+    "name": "data-export-revolve-leader-detail"
+  },
+  "/data-export/revolve/leader/summary": {
+    "name": "data-export-revolve-leader-summary"
+  },
+  "/data-export/revolve/monthlyUsed": {
+    "name": "data-export-revolve-monthlyUsed"
+  },
+  "/data-export/revolve/sourceList": {
+    "name": "data-export-revolve-sourceList"
+  },
+  "/data-export/revolve/staffStayedInfo": {
+    "name": "data-export-revolve-staffStayedInfo"
+  },
+  "/data-export/revolve/survey/area": {
+    "name": "data-export-revolve-survey-area"
+  },
+  "/data-export/revolve/survey/type": {
+    "name": "data-export-revolve-survey-type"
+  },
+  "/data-export/revolve/talents/detail": {
+    "name": "data-export-revolve-talents-detail"
+  },
+  "/data-export/revolve/talents/summary": {
+    "name": "data-export-revolve-talents-summary"
+  },
+  "/data-list/am-space/allocation": {
+    "name": "data-list-am-space-allocation"
+  },
+  "/data-list/am-space/management": {
+    "name": "data-list-am-space-management"
+  },
+  "/data-list/am-space/planning": {
+    "name": "data-list-am-space-planning"
+  },
+  "/data-list/building/planning": {
+    "name": "data-list-building-planning"
+  },
+  "/data-list/fin-budget/summary": {
+    "name": "data-list-fin-budget-summary"
+  },
+  "/data-list/fm/index-stat": {
+    "name": "data-list-fm-index-stat"
+  },
+  "/data-list/revolve/bed-allocation-details": {
+    "name": "data-list-revolve-bed-allocation-details"
+  },
+  "/data-list/revolve/bed-management-details": {
+    "name": "data-list-revolve-bed-management-details"
+  },
+  "/data-list/revolve/bud-stat-summary": {
+    "name": "data-list-revolve-bud-stat-summary"
+  },
+  "/data-list/revolve/community-monthly-details": {
+    "name": "data-list-revolve-community-monthly-details"
+  },
+  "/data-list/revolve/eu-summary": {
+    "name": "data-list-revolve-eu-summary"
+  },
+  "/data-list/revolve/leader/detail": {
+    "name": "data-list-revolve-leader-detail"
+  },
+  "/data-list/revolve/leader/summary": {
+    "name": "data-list-revolve-leader-summary"
+  },
+  "/data-list/revolve/monthlyUsed": {
+    "name": "data-list-revolve-monthlyUsed"
+  },
+  "/data-list/revolve/sourceList": {
+    "name": "data-list-revolve-sourceList"
+  },
+  "/data-list/revolve/staffStayedInfo": {
+    "name": "data-list-revolve-staffStayedInfo"
+  },
+  "/data-list/revolve/survey/area": {
+    "name": "data-list-revolve-survey-area"
+  },
+  "/data-list/revolve/survey/type": {
+    "name": "data-list-revolve-survey-type"
+  },
+  "/data-list/revolve/talents/detail": {
+    "name": "data-list-revolve-talents-detail"
+  },
+  "/data-list/revolve/talents/summary": {
+    "name": "data-list-revolve-talents-summary"
+  },
+  "/estate/getBuildingInfoByBuildingId": {
+    "name": "estate-getBuildingInfoByBuildingId"
+  },
+  "/estate/getRevolvingProperty": {
+    "name": "estate-getRevolvingProperty"
+  },
+  "/estate/getRevolvingSummary": {
+    "name": "estate-getRevolvingSummary"
+  },
+  "/estate/listBuildingByPropertyPointId": {
+    "name": "estate-listBuildingByPropertyPointId"
+  },
+  "/estate/statAllDataWithMap": {
+    "name": "estate-statAllDataWithMap"
+  },
+  "/estate/statBuildAreaDetail": {
+    "name": "estate-statBuildAreaDetail"
+  },
+  "/estate/statBuildingAreaShort": {
+    "name": "estate-statBuildingAreaShort"
+  },
+  "/estate/statDecisionAllData": {
+    "name": "estate-statDecisionAllData"
+  },
+  "/fm/operation/demand": {
+    "name": "fm-operation-demand"
+  },
+  "/fm/stat-data/data-center/demand/chart-project-stat": {
+    "name": "fm-stat-data-data-center-demand-chart-project-stat"
+  },
+  "/fm/stat-data/data-center/demand/pie-de-sum": {
+    "name": "fm-stat-data-data-center-demand-pie-de-sum"
+  },
+  "/fm/stat-data/data-center/demand/pie-other": {
+    "name": "fm-stat-data-data-center-demand-pie-other"
+  },
+  "/fm/stat-data/data-center/demand/table-project-stat": {
+    "name": "fm-stat-data-data-center-demand-table-project-stat"
+  },
+  "/fm/stat-data/data-center/demand/table-project-stat-export": {
+    "name": "fm-stat-data-data-center-demand-table-project-stat-export"
+  },
+  "/fm/stat-data/data-center/facility/chart-project-stat": {
+    "name": "fm-stat-data-data-center-facility-chart-project-stat"
+  },
+  "/fm/stat-data/data-center/facility/pie-fac-sum": {
+    "name": "fm-stat-data-data-center-facility-pie-fac-sum"
+  },
+  "/fm/stat-data/data-center/facility/pie-other": {
+    "name": "fm-stat-data-data-center-facility-pie-other"
+  },
+  "/fm/stat-data/data-center/facility/table-project-stat": {
+    "name": "fm-stat-data-data-center-facility-table-project-stat"
+  },
+  "/fm/stat-data/data-center/facility/table-project-stat-export": {
+    "name": "fm-stat-data-data-center-facility-table-project-stat-export"
+  },
+  "/fm/stat-data/data-center/inspect/chart-project-stat": {
+    "name": "fm-stat-data-data-center-inspect-chart-project-stat"
+  },
+  "/fm/stat-data/data-center/inspect/pie-in-task-sum": {
+    "name": "fm-stat-data-data-center-inspect-pie-in-task-sum"
+  },
+  "/fm/stat-data/data-center/inspect/pie-other": {
+    "name": "fm-stat-data-data-center-inspect-pie-other"
+  },
+  "/fm/stat-data/data-center/inspect/table-project-stat": {
+    "name": "fm-stat-data-data-center-inspect-table-project-stat"
+  },
+  "/fm/stat-data/data-center/inspect/table-project-stat-export": {
+    "name": "fm-stat-data-data-center-inspect-table-project-stat-export"
+  },
+  "/fm/stat-data/data-center/maint/chart-project-stat": {
+    "name": "fm-stat-data-data-center-maint-chart-project-stat"
+  },
+  "/fm/stat-data/data-center/maint/pie-other": {
+    "name": "fm-stat-data-data-center-maint-pie-other"
+  },
+  "/fm/stat-data/data-center/maint/table-project-export": {
+    "name": "fm-stat-data-data-center-maint-table-project-export"
+  },
+  "/fm/stat-data/data-center/maint/table-project-stat": {
+    "name": "fm-stat-data-data-center-maint-table-project-stat"
+  },
+  "/fm/stat-data/data-center/work-order/chart-project-stat": {
+    "path": "/user/home",
+    "name": "fm-stat-data-data-center-work-order-chart-project-stat"
+  },
+  "/fm/stat-data/data-center/work-order/pie-other": {
+    "name": "fm-stat-data-data-center-work-order-pie-other"
+  },
+  "/fm/stat-data/data-center/work-order/pie-wo-sum": {
+    "name": "fm-stat-data-data-center-work-order-pie-wo-sum"
+  },
+  "/fm/stat-data/data-center/work-order/table-project-stat": {
+    "name": "fm-stat-data-data-center-work-order-table-project-stat"
+  },
+  "/fm/stat-data/data-center/work-order/table-project-stat-export": {
+    "name": "fm-stat-data-data-center-work-order-table-project-stat-export"
+  },
+  "/fm/stat-data/line-chart-test": {
+    "name": "fm-stat-data-line-chart-test"
+  },
+  "/fm/stat-data/pie-chart-test": {
+    "name": "fm-stat-data-pie-chart-test"
+  },
+  "/fm/stat-data/project-list": {
+    "name": "fm-stat-data-project-list"
+  },
+  "/fm/stat-data/project/demand-satisfaction/chart-satisfaction": {
+    "name": "fm-stat-data-project-demand-satisfaction-chart-satisfaction"
+  },
+  "/fm/stat-data/project/demand-satisfaction/pie-other": {
+    "name": "fm-stat-data-project-demand-satisfaction-pie-other"
+  },
+  "/fm/stat-data/project/demand-satisfaction/table-satisfaction": {
+    "name": "fm-stat-data-project-demand-satisfaction-table-satisfaction"
+  },
+  "/fm/stat-data/project/demand-satisfaction/table-satisfaction-export": {
+    "name": "fm-stat-data-project-demand-satisfaction-table-satisfaction-export"
+  },
+  "/fm/stat-data/project/demand/chart-de-status": {
+    "name": "fm-stat-data-project-demand-chart-de-status"
+  },
+  "/fm/stat-data/project/demand/pie-other": {
+    "name": "fm-stat-data-project-demand-pie-other"
+  },
+  "/fm/stat-data/project/demand/pie-sum": {
+    "name": "fm-stat-data-project-demand-pie-sum"
+  },
+  "/fm/stat-data/project/demand/table-de-status": {
+    "name": "fm-stat-data-project-demand-table-de-status"
+  },
+  "/fm/stat-data/project/demand/table-de-status-export": {
+    "name": "fm-stat-data-project-demand-table-de-status-export"
+  },
+  "/fm/stat-data/project/facility/pie-fac-sum": {
+    "name": "fm-stat-data-project-facility-pie-fac-sum"
+  },
+  "/fm/stat-data/project/facility/pie-other": {
+    "name": "fm-stat-data-project-facility-pie-other"
+  },
+  "/fm/stat-data/project/inspect/chart-status-stat": {
+    "name": "fm-stat-data-project-inspect-chart-status-stat"
+  },
+  "/fm/stat-data/project/inspect/pie-in-task-sum": {
+    "name": "fm-stat-data-project-inspect-pie-in-task-sum"
+  },
+  "/fm/stat-data/project/inspect/pie-other": {
+    "name": "fm-stat-data-project-inspect-pie-other"
+  },
+  "/fm/stat-data/project/inspect/table-status-stat": {
+    "name": "fm-stat-data-project-inspect-table-status-stat"
+  },
+  "/fm/stat-data/project/inspect/table-status-stat-export": {
+    "name": "fm-stat-data-project-inspect-table-status-stat-export"
+  },
+  "/fm/stat-data/project/maint/chart-status-stat": {
+    "name": "fm-stat-data-project-maint-chart-status-stat"
+  },
+  "/fm/stat-data/project/maint/pie-maint-set-sum": {
+    "name": "fm-stat-data-project-maint-pie-maint-set-sum"
+  },
+  "/fm/stat-data/project/maint/table-status-export": {
+    "name": "fm-stat-data-project-maint-table-status-export"
+  },
+  "/fm/stat-data/project/maint/table-status-stat": {
+    "name": "fm-stat-data-project-maint-table-status-stat"
+  },
+  "/fm/stat-data/project/work-order/chart-status": {
+    "name": "fm-stat-data-project-work-order-chart-status"
+  },
+  "/fm/stat-data/project/work-order/pie-other": {
+    "name": "fm-stat-data-project-work-order-pie-other"
+  },
+  "/fm/stat-data/project/work-order/pie-wo-sum": {
+    "name": "fm-stat-data-project-work-order-pie-wo-sum"
+  },
+  "/fm/stat-data/project/work-order/table-status": {
+    "name": "fm-stat-data-project-work-order-table-status"
+  },
+  "/fm/stat-data/project/work-order/table-status-export": {
+    "name": "fm-stat-data-project-work-order-table-status-export"
+  },
+  "/fm/stat-data/table-data-test": {
+    "name": "fm-stat-data-table-data-test"
+  },
+  "/geo": {
+    "name": "geo"
+  },
+  "/geo/{id}": {
+    "name": "geo-{id}"
+  },
+  "/partition/findAll": {
+    "name": "partition-findAll"
+  },
+  "/partition/{id}": {
+    "name": "partition-{id}"
+  },
+  "/pp-master-data/{ref-id}": {
+    "name": "pp-master-data-{ref-id}"
+  },
+  "/pp-master-data/{ref-id}/{source-module}": {
+    "name": "pp-master-data-{ref-id}-{source-module}"
+  },
+  "/property": {
+    "name": "property"
+  },
+  "/property/chart/property": {
+    "name": "property-chart-property"
+  },
+  "/revolve/decision/community": {
+    "name": "revolve-decision-community"
+  },
+  "/revolve/decision/community-name": {
+    "name": "revolve-decision-community-name"
+  },
+  "/revolve/decision/in-staff-type-dst": {
+    "name": "revolve-decision-in-staff-type-dst"
+  },
+  "/revolve/decision/leader": {
+    "name": "revolve-decision-leader"
+  },
+  "/revolve/decision/revolve-house-check-in-trend": {
+    "name": "revolve-decision-revolve-house-check-in-trend"
+  },
+  "/revolve/decision/revolve-house-month-change-num": {
+    "name": "revolve-decision-revolve-house-month-change-num"
+  },
+  "/revolve/decision/revolve-house-source-statue": {
+    "name": "revolve-decision-revolve-house-source-statue"
+  },
+  "/revolve/decision/staff": {
+    "name": "revolve-decision-staff"
+  },
+  "/revolve/decision/talents": {
+    "name": "revolve-decision-talents"
+  },
+  "/revolve/detail": {
+    "name": "revolve-detail"
+  },
+  "/revolve/short": {
+    "name": "revolve-short"
   }
 }

@@ -28,14 +28,22 @@ const routes = [
         component: require('../user/home/index.js').default,
       },
       {
+        path: '/user/home/service/am-building-map-partition-and-point',
+        exact: true,
+        component: require('../user/home/service/am-building-map-partition-and-point.js')
+          .default,
+      },
+      {
+        path:
+          '/user/home/service/fm-stat-data-data-center-work-order-chart-project-stat',
+        exact: true,
+        component: require('../user/home/service/fm-stat-data-data-center-work-order-chart-project-stat.js')
+          .default,
+      },
+      {
         path: '/user',
         exact: true,
         component: require('../user/index.js').default,
-      },
-      {
-        path: '/user/service/appIndex',
-        exact: true,
-        component: require('../user/service/appIndex.js').default,
       },
       {
         path: '/third',

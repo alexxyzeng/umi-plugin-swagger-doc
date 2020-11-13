@@ -32,6 +32,7 @@ export default function(api, options) {
     if (subType === "getSwaggerData") {
       getSwaggerData(api, options, payload, success);
     } else if (subType === "generateService") {
+      console.log("generate service");
       generateService(api, options, payload, success);
     } else if (subType === "generateEnums") {
       getEnums(api, options, payload, success);
@@ -136,6 +137,7 @@ function getSwaggerData(api, options, payload, success, failure) {
 }
 
 function generateService(api, options, payload, success, failure) {
+  console.log(payload, "---- payload");
   const { pathItem, fileName, names, path: pathUrl } = payload;
 
   const { configPath, pagePath, serviceTag, mockPath } = options;
@@ -145,26 +147,26 @@ function generateService(api, options, payload, success, failure) {
   );
   const { path } = pathItem;
   // TODO: 移除之前的记录
-  const prevConfig = serviceConfig[path];
-  if (prevConfig) {
-    const { path: prevPath, name: prevName } = prevConfig;
-    if (!prevPath || !prevName) {
-      return;
-    }
-    const prevServicePath = resolve(
-      `${pagePath}${prevPath}/${serviceTag}`,
-      `${prevName}.js`
-    );
+  // const prevConfig = serviceConfig[path];
+  // if (prevConfig) {
+  //   const { path: prevPath, name: prevName } = prevConfig;
+  //   if (!prevPath || !prevName) {
+  //     return;
+  //   }
+  //   const prevServicePath = resolve(
+  //     `${pagePath}${prevPath}/${serviceTag}`,
+  //     `${prevName}.js`
+  //   );
 
-    if (fs.existsSync(prevServicePath)) {
-      fs.unlinkSync(prevServicePath);
-    }
+  //   if (fs.existsSync(prevServicePath)) {
+  //     fs.unlinkSync(prevServicePath);
+  //   }
 
-    const prevMockPath = resolve(mockPath, `${prevName}.js`);
-    if (fs.existsSync(prevMockPath)) {
-      fs.unlinkSync(prevMockPath);
-    }
-  }
+  //   const prevMockPath = resolve(mockPath, `${prevName}.js`);
+  //   if (fs.existsSync(prevMockPath)) {
+  //     fs.unlinkSync(prevMockPath);
+  //   }
+  // }
   generateFile(payload, global.definitions, undefined, options);
   serviceConfig[path] = { path: pathUrl, name: fileName };
   fs.writeFileSync(serviceConfigPath, JSON.stringify(serviceConfig, null, 2));
@@ -198,7 +200,6 @@ function getEnums(api, options, payload, success) {
     enumPath,
     enumConfigName
   } = options;
-  console.log(payload, "---- payload");
   const enumConfigPath = resolve(configPath, enumConfigName);
   if (!fs.existsSync(configPath)) {
     fs.mkdirSync(configPath);

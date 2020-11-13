@@ -215,7 +215,7 @@ export default (__IS_BROWSER ? null : serverRender);
 
     // Umi UI Bubble
     require('../../../../node_modules/umi-plugin-ui/lib/bubble').default({
-      port: 3001,
+      port: 3002,
       path: '/Users/alex/Documents/GitHub/umi-plugin-swagger-doc/example',
       currentProject: '',
       isBigfish: undefined,

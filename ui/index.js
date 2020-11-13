@@ -42,7 +42,7 @@ export default api => {
       });
     });
 
-    const { current: onGenerate } = useRef((pathItem, path, fileName) => {
+    const onGenerate = (pathItem, path, fileName) => {
       callRemote({
         type: "org.alexzeng.umi-plugin-swagger-doc.generateService",
         payload: {
@@ -54,7 +54,7 @@ export default api => {
       }).then(({ data }) => {
         // setPathList(data);
       });
-    });
+    };
 
     const methodNameRef = useRef({});
 
