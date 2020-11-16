@@ -1408,6 +1408,7 @@
     "name": "facility-export"
   },
   "/am-building-map/building-info": {
+    "path": "",
     "name": "am-building-map-building-info"
   },
   "/am-building-map/geo-data": {
@@ -1660,6 +1661,7 @@
     "name": "estate-statDecisionAllData"
   },
   "/fm/operation/demand": {
+    "path": "",
     "name": "fm-operation-demand"
   },
   "/fm/stat-data/data-center/demand/chart-project-stat": {
@@ -1878,5 +1880,20 @@
   },
   "/revolve/short": {
     "name": "revolve-short"
+  },
+  "/fm/operation/facility": {
+    "name": "fm-operation-facility"
+  },
+  "/fm/operation/inspect": {
+    "name": "fm-operation-inspect"
+  },
+  "/fm/operation/maint": {
+    "name": "fm-operation-maint"
+  },
+  "/fm/operation/recent-year": {
+    "name": "fm-operation-recent-year"
+  },
+  "/fm/operation/workorder": {
+    "name": "fm-operation-workorder"
   }
 }

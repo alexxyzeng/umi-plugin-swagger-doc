@@ -778,5 +778,10 @@
   "statDecisionStaffUsingPOST": "statDecisionStaffUsingPOST",
   "statDecisionTalentsUsingPOST": "statDecisionTalentsUsingPOST",
   "resolveDetailUsingPOST": "resolveDetailUsingPOST",
-  "revolveShortUsingPOST": "revolveShortUsingPOST"
+  "revolveShortUsingPOST": "revolveShortUsingPOST",
+  "facilityInfoUsingGET": "facilityInfoUsingGET",
+  "inspectInfoUsingGET": "inspectInfoUsingGET",
+  "maintInfoUsingGET": "maintInfoUsingGET",
+  "getRecentlyYearUsingGET": "getRecentlyYearUsingGET",
+  "workOrderInfoUsingGET": "workOrderInfoUsingGET"
 }
