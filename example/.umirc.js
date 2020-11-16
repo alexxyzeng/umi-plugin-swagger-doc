@@ -21,7 +21,7 @@ export default {
         // 枚举名称config
         enumConfigName: "enumNameConfig.json",
         // service前缀
-        servicePrefix: ""
+        servicePrefix: "import API from '@/helper/api'"
       }
     ]
   ]

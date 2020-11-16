@@ -10,14 +10,10 @@ export default {
         "series": [
           {
             "data": [
-              {
-                "name": "string",
-                "value": [
-                  {}
-                ]
-              }
+              {}
             ],
-            "name": "string"
+            "name": "string",
+            "type": "string"
           }
         ]
       },
@@ -29,14 +25,10 @@ export default {
           "series": [
             {
               "data": [
-                {
-                  "name": "string",
-                  "value": [
-                    {}
-                  ]
-                }
+                {}
               ],
-              "name": "string"
+              "name": "string",
+              "type": "string"
             }
           ]
         },

@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef, Fragment } from "react";
-import { Button, Collapse, Row } from "antd";
+import { useEffect, useState, useRef, Fragment, useMemo } from "react";
+import { Button, Collapse, Input, Row } from "antd";
 import PathItem from "./PathItem";
 import "./index.css";
 import PathHeader from "./PathHeader";
@@ -18,9 +18,9 @@ export default api => {
   const { callRemote } = api;
   function PluginPanel() {
     const [pathList, setPathList] = useState([]);
+    const [search, setSearch] = useState("");
     const [currentPath, setCurrentPath] = useState(undefined);
     const [pathHash, setPathHash] = useState({});
-
     useEffect(() => {
       callRemote({
         type: "org.alexzeng.umi-plugin-swagger-doc.getSwaggerData"
@@ -41,6 +41,28 @@ export default api => {
         return { ...pathHashCurrent };
       });
     });
+
+    const list = useMemo(() => {
+      if (!search) {
+        return pathList;
+      }
+      return pathList.filter(pathItem => {
+        const { methods, path = "", tag = "" } = pathItem;
+        const lowerCasedSearch = (search || "").toLowerCase();
+        return (
+          path.toLowerCase().includes(lowerCasedSearch) ||
+          tag.toLowerCase().includes(lowerCasedSearch)
+          // methods.some(method => {
+          //   const { name, summary, tag } = method;
+          //   return (
+          //     name.includes(search) ||
+          //     summary.includes(search) ||
+          //     tag.includes(search)
+          //   );
+          // })
+        );
+      });
+    }, [pathList, search]);
 
     const onGenerate = (pathItem, path, fileName) => {
       callRemote({
@@ -66,10 +88,20 @@ export default api => {
       methodNameRef.current[path][operationId] = id;
     });
 
+    const { current: onSearch } = useRef(event => {
+      setSearch(event.target.value);
+    });
+
     return (
       <div style={{ padding: 20, overflow: "scroll" }}>
+        <Input
+          style={{ margin: "24px 0" }}
+          placeholder="请输入查找的关键字"
+          value={search}
+          onChange={onSearch}
+        />
         <Collapse value={currentPath} onChange={setCurrentPath}>
-          {pathList.map(pathItem => {
+          {list.map(pathItem => {
             const { path, methods, tag } = pathItem;
             return (
               <Panel header={<PathHeader pathItem={pathItem} />} key={path}>

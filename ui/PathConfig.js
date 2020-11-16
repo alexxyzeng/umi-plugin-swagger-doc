@@ -22,7 +22,7 @@ function PathHeader({ pathItem, onChange, value, onGenerate }) {
     <Row justify="start">
       <div>
         <Select
-          style={{ width: 160 }}
+          style={{ width: 240 }}
           onChange={onRouteChange}
           onClick={event => event.preventDefault()}
           value={value || "/"}

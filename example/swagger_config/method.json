@@ -712,7 +712,7 @@
   "statBuildAreaDetailUsingPOST": "statBuildAreaDetailUsingPOST",
   "statBuildingAreaShortUsingPOST": "statBuildingAreaShortUsingPOST",
   "statDecisionAllDataUsingPOST": "statDecisionAllDataUsingPOST",
-  "demandInfoUsingGET": "demandInfoUsingGET",
+  "demandInfoUsingGET": "getDemandInfo",
   "dataCenterDemandChartProjectStatUsingGET": "dataCenterDemandChartProjectStatUsingGET",
   "dataCenterDemandPieDeSumUsingGET_1": "dataCenterDemandPieDeSumUsingGET_1",
   "dataCenterDemandPieOtherUsingGET": "dataCenterDemandPieOtherUsingGET",
