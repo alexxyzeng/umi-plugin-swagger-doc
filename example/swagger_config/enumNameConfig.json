@@ -1,1 +1,394 @@
-{}
+{
+  "swagger_enum_f95706349ea900beac18735875e822e5": {
+    "name": "bbb",
+    "def": "{否=No-0, 是=Yes-1}"
+  },
+  "swagger_enum_32681af3d47f5bd9a4df04af005a639c": {
+    "name": "swagger_enum_32681af3d47f5bd9a4df04af005a639c",
+    "def": "{抢单=Scramble-1, 派工=Dispatch-2, 处理=Process-3, 审批=Approval-4, 待验证或存档=CheckArchive-5, 我的报单=MyReport-6, 待转单=Transfer-7, 待完成=Pending-8, 待验证=Check-9, 待存档=Archive-10, 处理中-当前执行人-工单子状态=ProcessExecutor-11, 暂停-当前执行人-工单子状态=SuspendExecutor-12}"
+  },
+  "swagger_enum_bf667871cb6291ab8f9e94fa0b1c1786": {
+    "name": "swagger_enum_bf667871cb6291ab8f9e94fa0b1c1786",
+    "def": "{成功=Success-1, 部分失败=PartialFail-2, 处理中=Processing-3}"
+  },
+  "swagger_enum_354c1eca783d88caad75e4831555b334": {
+    "name": "swagger_enum_354c1eca783d88caad75e4831555b334",
+    "def": "{图片=Image-1, 视频=Video-2, 音频=Voice-3, 附件=Attachment-4}"
+  },
+  "swagger_enum_575df65036a58b6e32d8354036fa1e3c": {
+    "name": "swagger_enum_575df65036a58b6e32d8354036fa1e3c",
+    "def": "{待审核=Unchecked-1, 通过=Pass-2, 不通过=Reject-3}"
+  },
+  "swagger_enum_231cd6c476eaa10fe8ce06a2458ac839": {
+    "name": "swagger_enum_231cd6c476eaa10fe8ce06a2458ac839",
+    "def": "{服务质量=Quality-1, 服务速度=Speed-2, 服务态度=Attitude-3}"
+  },
+  "swagger_enum_7d5e10ad04515f5369cd7afedb18bed4": {
+    "name": "swagger_enum_7d5e10ad04515f5369cd7afedb18bed4",
+    "def": "{评价=Evaluate-1, 回访=Visit-2}"
+  },
+  "swagger_enum_f6546adeaba820809130a41fc573ddeb": {
+    "name": "swagger_enum_f6546adeaba820809130a41fc573ddeb",
+    "def": "{未评价=No-1, 手动评价=YesHand-2, 自动评价=YesAuto-3}"
+  },
+  "swagger_enum_8f5fb0a4d1b5476b344b35f61c769e88": {
+    "name": "swagger_enum_8f5fb0a4d1b5476b344b35f61c769e88",
+    "def": "{创建=Create-1, 审核=Approve-2, 更新=Update-3, 跟进=Follow-4, 建单=CreateOrder-5, 处理完成=Done-6, 验证=Confirm-7, 评价=Evaluate-8, 回访=Visit-9, 取消=Cancel-10, 转派=Redeploy-11, 追加处理=Additional-12, 评论=Comment-13}"
+  },
+  "swagger_enum_30aac87cb5b467bd9a2479c7af63b015": {
+    "name": "swagger_enum_30aac87cb5b467bd9a2479c7af63b015",
+    "def": "{待审核=PendingCheck-1, 待处理=PendingDispose-2, 跟进中=Follow-3, 已建单=CreatedOrder-4, 待验证=PendingConfirm-5, 待评价=PendingEvaluate-6, 已完成=Done-7, 已评价=Evaluate-9, 已取消=Cancel-8}"
+  },
+  "swagger_enum_bf053b5b30b52c541378a6798dbf09c1": {
+    "name": "swagger_enum_bf053b5b30b52c541378a6798dbf09c1",
+    "def": "{员工=User-1, 客户=Clientele-2, 其他=Other-9}"
+  },
+  "swagger_enum_5482d4e762ca3d3e8a21dfa1a7d7d5a5": {
+    "name": "swagger_enum_5482d4e762ca3d3e8a21dfa1a7d7d5a5",
+    "def": "{未回访=No-1, 已回访=Yes-2}"
+  },
+  "swagger_enum_bb4d47a6b2f17516fc3fc350d9827cff": {
+    "name": "swagger_enum_bb4d47a6b2f17516fc3fc350d9827cff",
+    "def": "{创建=Create-1, 待派工=WaitWork-2, 待抢单=WaitGrabOrder-3, 待接单=WaitOrder-4, 待完成=WaitFinish-5, 已暂停=Pause-6, 待料中=WaitMaterial-8, 已完成=Finish-9, 已终止=Over-10, 待转单=PendingOrder-11, 待存档=NoArchived-12, 已存档=Archived-13, 待派工_临时=TempNoWork-14, 待接单_退单_临时=TempNoOrder_Refund-151, 暂停_退单_临时=TempPause_Refund-152, 待完成_退单_临时=TempNoFinish_Refund-153, 待完成_临时=TempNoFinish-16, 已完成待验证_临时=TempFinish-17, 待存档_临时=TempNoArchive-18, 异常=Error-19, 待审批=NoApproval-20}"
+  },
+  "swagger_enum_d133d30f32487dceb3a0146fafd99b67": {
+    "name": "swagger_enum_d133d30f32487dceb3a0146fafd99b67",
+    "def": "{分钟=Min-1, 小时=Hour-2, 天=Day-3}"
+  },
+  "swagger_enum_43eff8ebe77a438ed7b74254019bf8a3": {
+    "name": "swagger_enum_43eff8ebe77a438ed7b74254019bf8a3",
+    "def": "{需求创建=Create-1, 审核通过=Approved-2, 审核不通过=ApproveDenied-3, 需求创建工单=CreateOrder-4, 接单（需求关联工单第一次接单）=Ordered-5, 需求跟进=Track-6, 需求处理完成=Done-7, 需求自动验证=AutomaticVerification-8, 追加处理审核通过=AddProcessingApproved-9, 需求取消=Cancel-10}"
+  },
+  "swagger_enum_efc5acfaedd4c27fd061efe44ffcd9d5": {
+    "name": "swagger_enum_efc5acfaedd4c27fd061efe44ffcd9d5",
+    "def": "{行=HeadOffice-1, 部=Department-2, 室=Office-3}"
+  },
+  "swagger_enum_e9268b4dd6a319634f971e21daed62fd": {
+    "name": "swagger_enum_e9268b4dd6a319634f971e21daed62fd",
+    "def": "{删除=Deleted-1, 有效=Valid-0}"
+  },
+  "swagger_enum_3f1c4964841e6aa6895097b9a524df69": {
+    "name": "swagger_enum_3f1c4964841e6aa6895097b9a524df69",
+    "def": "{员工=AcTypeEnum-1, 领导层=AcTypeEnum-2, 管理层=AcTypeEnum-3}"
+  },
+  "swagger_enum_9975e54a41b00189cc7c269d4af6fcc2": {
+    "name": "swagger_enum_9975e54a41b00189cc7c269d4af6fcc2",
+    "def": "{失效=Failure-0, 激活=Activate-1}"
+  },
+  "swagger_enum_2ced4badea074d18a99b67d42b2ed048": {
+    "name": "swagger_enum_2ced4badea074d18a99b67d42b2ed048",
+    "def": "{所有需求可见=All-0, 相关需求可见=Related-1}"
+  },
+  "swagger_enum_8e37b720a9a6408a6c5b32232b5735a7": {
+    "name": "swagger_enum_8e37b720a9a6408a6c5b32232b5735a7",
+    "def": "{离职=EmStatusEnum-0, 在职=EmStatusEnum-1}"
+  },
+  "swagger_enum_c0dff512d71f67d525de7df7bfce2937": {
+    "name": "WorkerType",
+    "def": "{员工=EmTypeEnum-1, 领导层=EmTypeEnum-2, 管理层=EmTypeEnum-3, 供应商=EmTypeEnum-4, 内置用户=EmTypeEnum-5}"
+  },
+  "swagger_enum_63919af9bb4ce989708c2455adccd114": {
+    "name": "swagger_enum_63919af9bb4ce989708c2455adccd114",
+    "def": "{女=GenderEnum-0, 男=GenderEnum-1}"
+  },
+  "swagger_enum_87afc2e578c36249940e10415cd811dd": {
+    "name": "swagger_enum_87afc2e578c36249940e10415cd811dd",
+    "def": "{所有巡检可见=All-0, 相关巡检可见=Related-1}"
+  },
+  "swagger_enum_53d5c527cfceebfbf8f7e6117c9f9f5c": {
+    "name": "swagger_enum_53d5c527cfceebfbf8f7e6117c9f9f5c",
+    "def": "{手动增加=ManualIncrease-0, 一事通=SystemSync-2, HR系统推送=HRPush-3, 汇管家=HGJSync-4}"
+  },
+  "swagger_enum_465776c3ab84caa235cc8e9765c3350e": {
+    "name": "swagger_enum_465776c3ab84caa235cc8e9765c3350e",
+    "def": "{所有工单可见=All-0, 相关工单可见=Related-1}"
+  },
+  "swagger_enum_552356cc98bf9e4127266d2c975ddb4e": {
+    "name": "swagger_enum_552356cc98bf9e4127266d2c975ddb4e",
+    "def": "{文本=Text-1, 数字=Number-2, 日期=Date-3, 单选=Elect-4}"
+  },
+  "swagger_enum_deab69cac61ac91c2110885feda6c58a": {
+    "name": "swagger_enum_deab69cac61ac91c2110885feda6c58a",
+    "def": "{上级分类的参数=Parent-0, 自己的参数=Oneself-1}"
+  },
+  "swagger_enum_24008b53b640afdcca8d2657a2138bca": {
+    "name": "swagger_enum_24008b53b640afdcca8d2657a2138bca",
+    "def": "{一级设备=One-1, 二级设备=Two-2, 三级设备=Three-3, 四级设备=Four-4, 五级设备=Five-5}"
+  },
+  "swagger_enum_62f77590b6423738e0ec1381e7f3459f": {
+    "name": "swagger_enum_62f77590b6423738e0ec1381e7f3459f",
+    "def": "{备用=Spare-1, 停运=Stop-2, 在用=Using-3, 维修中=Repair-4, 待机=Standby-5, 报废=Scrap-6, 维保中=Maint-7}"
+  },
+  "swagger_enum_59048ca6eacbac939e084aef4d9351aa": {
+    "name": "swagger_enum_59048ca6eacbac939e084aef4d9351aa",
+    "def": "{上级分类的核心组件=Parent-0, 自己的核心组件=Oneself-1}"
+  },
+  "swagger_enum_92394e56d129467cc20d4af992aab784": {
+    "name": "swagger_enum_92394e56d129467cc20d4af992aab784",
+    "def": "{年=Year-1, 月=Month-2}"
+  },
+  "swagger_enum_a50841592de7bbf334aee97e05b7026c": {
+    "name": "swagger_enum_a50841592de7bbf334aee97e05b7026c",
+    "def": "{周期=Cycle-1, 非周期=Acyclic-2}"
+  },
+  "swagger_enum_e954f6fb4aea4fd826ee19898a5b212e": {
+    "name": "swagger_enum_e954f6fb4aea4fd826ee19898a5b212e",
+    "def": "{天=Day-1, 周=Week-2, 月=Month-3}"
+  },
+  "swagger_enum_78a66d54f486c79390f70e68842180fd": {
+    "name": "swagger_enum_78a66d54f486c79390f70e68842180fd",
+    "def": "{常规=Normal-1, 夏季=Summer-2, 冬季=Winter-3}"
+  },
+  "swagger_enum_979eb2c170fa0fe0e7da37fdd95437f0": {
+    "name": "swagger_enum_979eb2c170fa0fe0e7da37fdd95437f0",
+    "def": "{巡检任务开始=Start-1, 巡检任务结束（未完成）=End-2, 任务异常提醒=Exception-3}"
+  },
+  "swagger_enum_0a3d88c7f79e3b47b7ab296db5495f97": {
+    "name": "swagger_enum_0a3d88c7f79e3b47b7ab296db5495f97",
+    "def": "{次/天=TimesDay-1, 天/次=DayTimes-2, 次/周=TimesWeek-3, 周/次=WeekTimes-4, 次/月=TimesMonth-5, 月/次=MonthTimes-6}"
+  },
+  "swagger_enum_d0a638cdb8b40ceb03b447e9c898dedf": {
+    "name": "swagger_enum_d0a638cdb8b40ceb03b447e9c898dedf",
+    "def": "{激活=Activate-1, 失效=Deactivate-2}"
+  },
+  "swagger_enum_a77ab9a074ebee35eed0cc56f8b069a6": {
+    "name": "swagger_enum_a77ab9a074ebee35eed0cc56f8b069a6",
+    "def": "{综合巡检=Synthesize-1, 设备巡检=Facility-2}"
+  },
+  "swagger_enum_74839a75ecbff9abe321e518a19543f0": {
+    "name": "swagger_enum_74839a75ecbff9abe321e518a19543f0",
+    "def": "{常规=Normal-1, 夏季=Summer-2, 冬季=winter-3}"
+  },
+  "swagger_enum_f8a2f404abd74febde06ed78f94492d1": {
+    "name": "swagger_enum_f8a2f404abd74febde06ed78f94492d1",
+    "def": "{不限=Unlimit-1, 在线=Online-2, 停用=Stop-3}"
+  },
+  "swagger_enum_1de6a18302917e72456ac684085e8261": {
+    "name": "swagger_enum_1de6a18302917e72456ac684085e8261",
+    "def": "{输入=Input-1, 选择=Select-2}"
+  },
+  "swagger_enum_aea981847974b2965f3a09cda658f168": {
+    "name": "swagger_enum_aea981847974b2965f3a09cda658f168",
+    "def": "{在用=Run-1, 停用=Stop-2}"
+  },
+  "swagger_enum_ecb0db8ffb33bc15861aec29ae8dce5b": {
+    "name": "swagger_enum_ecb0db8ffb33bc15861aec29ae8dce5b",
+    "def": "{正常=Normal-1, 异常=AbNormal-2}"
+  },
+  "swagger_enum_0dbaac8530d877e52275be7249602b46": {
+    "name": "swagger_enum_0dbaac8530d877e52275be7249602b46",
+    "def": "{已处理=Dispose-1, 未处理=Undispose-2}"
+  },
+  "swagger_enum_da316646f80c2f7a02f197cdc3af9e93": {
+    "name": "swagger_enum_da316646f80c2f7a02f197cdc3af9e93",
+    "def": "{现状处理=Situation-1, 报修工单=Workorder-2}"
+  },
+  "swagger_enum_f6f9afc3c420584a6570485e95ab28d8": {
+    "name": "swagger_enum_f6f9afc3c420584a6570485e95ab28d8",
+    "def": "{未检=Unstart-1, 已检=Complete-2, 漏检=Miss-3, 补检=Supplement-4}"
+  },
+  "swagger_enum_32ebcefb8129e833d1828617086b960c": {
+    "name": "swagger_enum_32ebcefb8129e833d1828617086b960c",
+    "def": "{未完成=Unfinished-1, 已完成=Complete-2}"
+  },
+  "swagger_enum_533bbb7450fe4ac58e8efcff7e269b88": {
+    "name": "swagger_enum_533bbb7450fe4ac58e8efcff7e269b88",
+    "def": "{未检=Unstart-1, 已检=Complete-2}"
+  },
+  "swagger_enum_fa9e7cb60b3ca04bfdabc7194b7d0a04": {
+    "name": "swagger_enum_fa9e7cb60b3ca04bfdabc7194b7d0a04",
+    "def": "{未开始=Unstart-1, 进行中=Process-2, 按时完成=Complate-3, 延期完成=DelayComplate-4, 未巡检=NoPolling-5}"
+  },
+  "swagger_enum_fec25798f184303fae923b36ec92c0ea": {
+    "name": "swagger_enum_fec25798f184303fae923b36ec92c0ea",
+    "def": "{未提交=Nd-1, 部分提交=Part-2, 全部提交=All-3}"
+  },
+  "swagger_enum_6e7fab1a8553c38e2f20df7f82bd7011": {
+    "name": "swagger_enum_6e7fab1a8553c38e2f20df7f82bd7011",
+    "def": "{清洁=Clean-1, 安保=Security-2, 设备=Facility-3, 机房=MachineRoom-4, 抄表=MeterReading-5, 绿化=Afforest-6}"
+  },
+  "swagger_enum_43233a0e15f35a695b1f3cf405b2282a": {
+    "name": "swagger_enum_43233a0e15f35a695b1f3cf405b2282a",
+    "def": "{设施设备管理=Fm-1, 资产管理=Am-2}"
+  },
+  "swagger_enum_963bde6f27fd4ad8d2a06e67008ca72f": {
+    "name": "swagger_enum_963bde6f27fd4ad8d2a06e67008ca72f",
+    "def": "{需求=Demand-1, 工单=Workorder-2, 预防性维护=PM-3, 巡检=Inspect-4, 库存=Stock-5, cmb员工服务平台=CmbDemand-6, 审批提醒=Approve-7, 周转房=Revolving-8}"
+  },
+  "swagger_enum_db369a950a1b9633adc5303691bdb259": {
+    "name": "swagger_enum_db369a950a1b9633adc5303691bdb259",
+    "def": "{站内信=Web-1, 移动推送=Mobile-2, 短信=Msg-3, 邮件=Email-4, 公告=Bulletin-5}"
+  },
+  "swagger_enum_47ee95935e5704972634e41b0a9e7217": {
+    "name": "swagger_enum_47ee95935e5704972634e41b0a9e7217",
+    "def": "{未发送=Unsent-0, 已发送=Sent-1}"
+  },
+  "swagger_enum_d4b69eef08aa96b1202ca7e091e8e6c3": {
+    "name": "swagger_enum_d4b69eef08aa96b1202ca7e091e8e6c3",
+    "def": "{天=Day-1, 周=Week-2, 月=Month-3, 季=Quarter-4, 年=Year-5}"
+  },
+  "swagger_enum_10cd81c9e6a33753ef66e7904d463d40": {
+    "name": "swagger_enum_10cd81c9e6a33753ef66e7904d463d40",
+    "def": "{启用=Enable-1, 暂停=Pause-2}"
+  },
+  "swagger_enum_6b08bd16f8c7565ab22862d32678ff83": {
+    "name": "swagger_enum_6b08bd16f8c7565ab22862d32678ff83",
+    "def": "{审批提醒=Approve-1, 完成升级提醒=Promotion-2, 工作提醒=Work-3}"
+  },
+  "swagger_enum_d03151cd3f99792bee0352d6e2eaabf5": {
+    "name": "swagger_enum_d03151cd3f99792bee0352d6e2eaabf5",
+    "def": "{分钟=Min-1, 小时=Hour-2, 天=Day-3, 月=Month-4, 年=Year-5}"
+  },
+  "swagger_enum_6020fa15c0231817808159308edf972b": {
+    "name": "swagger_enum_6020fa15c0231817808159308edf972b",
+    "def": "{未开始=NotBegin-1, 处理中=InProgress-2, 已完成=JobDone-3, 已过期=Expired-4, 已逾期=Overdue-5}"
+  },
+  "swagger_enum_a3fe353cef5fce50d2365c9aaaa60407": {
+    "name": "swagger_enum_a3fe353cef5fce50d2365c9aaaa60407",
+    "def": "{查验任务=CheckTask-1, 查验验收=AcceptTask-2}"
+  },
+  "swagger_enum_7b1778f87bfaa9f911eb4d2f204537b1": {
+    "name": "swagger_enum_7b1778f87bfaa9f911eb4d2f204537b1",
+    "def": "{位置=Site-1, 设备=Facility-2}"
+  },
+  "swagger_enum_0a4a1da430a539f08961381528945c16": {
+    "name": "swagger_enum_0a4a1da430a539f08961381528945c16",
+    "def": "{已创建=Created-1, 处理中=InProgress-2, 已完成=Completed-3, 已验证=Acceptance-4}"
+  },
+  "swagger_enum_af55e567fc3aea7d7a789722dd623892": {
+    "name": "swagger_enum_af55e567fc3aea7d7a789722dd623892",
+    "def": "{工作组=Group-1, 员工=User-2}"
+  },
+  "swagger_enum_912f787e38f41fe3f5bc15ac56bfcc65": {
+    "name": "swagger_enum_912f787e38f41fe3f5bc15ac56bfcc65",
+    "def": "{内部报修=Internal-1, 外部报修=External-2, 计划性维护=PlannedMaintenance-3, 内部或外部报修=Mix-4}"
+  },
+  "swagger_enum_ecc5a3dcb8fa85a67a685c973b507ae4": {
+    "name": "swagger_enum_ecc5a3dcb8fa85a67a685c973b507ae4",
+    "def": "{耘申=Boss-0, 租户=Tenant-1}"
+  },
+  "swagger_enum_2a780c4278ad8e39e0d06d45c7b939d6": {
+    "name": "swagger_enum_2a780c4278ad8e39e0d06d45c7b939d6",
+    "def": "{多项目版=Project-1, 集团版=Enterprise-2}"
+  },
+  "swagger_enum_3ba9a054886dfcf0ec075caf5ae41190": {
+    "name": "swagger_enum_3ba9a054886dfcf0ec075caf5ae41190",
+    "def": "{失效=AccountStatusEnum-0, 激活=AccountStatusEnum-1}"
+  },
+  "swagger_enum_99d7729a6164692a99d71d8c4f544ab0": {
+    "name": "swagger_enum_99d7729a6164692a99d71d8c4f544ab0",
+    "def": "{主管=Supervisor-1, 排程派工=Dispatcher-2, 追踪=Tracer-3, 验证=Verifier-4, 存档=Archiver-5, 执行人=Worker-6}"
+  },
+  "swagger_enum_67523542810b6f9674db4e39f8833b0e": {
+    "name": "swagger_enum_67523542810b6f9674db4e39f8833b0e",
+    "def": "{服务质量=ServiceQuality-1, 服务速度=ServiceSpeed-2, 服务态度=ServiceAttitude-3}"
+  },
+  "swagger_enum_321130edbe5385d621226d7ea07da4be": {
+    "name": "swagger_enum_321130edbe5385d621226d7ea07da4be",
+    "def": "{自动派单=AutoDispatch-1, 智能派单=IntelligentDispatch-2, 排程派工=ManualDispatch-3, 抢单=Scramble-4, 增派=AddExecutor-5}"
+  },
+  "swagger_enum_d18e4b8a6ad4442578e3f0817d433403": {
+    "name": "swagger_enum_d18e4b8a6ad4442578e3f0817d433403",
+    "def": "{未接单=NoOrder-1, 已接单=Order-2, 暂停中=Pause-3, 已上交=Submitted-4, 已退单=Chargeback-5}"
+  },
+  "swagger_enum_4a5b0f5267b55e045ac3499542020b1a": {
+    "name": "swagger_enum_4a5b0f5267b55e045ac3499542020b1a",
+    "def": "{部门=Department-1, 服务类型=ServiceType-2, 空间位置=WholeSpace-3, 大楼=Building-4, 楼层=Floor-5, 房间=Space-6, 优先级=Priority-7, 故障设备=Facility-8, 流程设置=Sla-9}"
+  },
+  "swagger_enum_ec2bf7ebe88cd532ee5de5fb1a0ac877": {
+    "name": "swagger_enum_ec2bf7ebe88cd532ee5de5fb1a0ac877",
+    "def": "{创建=WorkorderProcessTypeEnum-1, 创建=WorkorderProcessTypeEnum-2, 创建=WorkorderProcessTypeEnum-3, 创建=WorkorderProcessTypeEnum-4, 转单=WorkorderProcessTypeEnum-5, 转单=WorkorderProcessTypeEnum-6, 转单=WorkorderProcessTypeEnum-7, 转单=WorkorderProcessTypeEnum-8, 派工=WorkorderProcessTypeEnum-9, 派工=WorkorderProcessTypeEnum-10, 派工=WorkorderProcessTypeEnum-11, 增派=WorkorderProcessTypeEnum-12, 抢单=WorkorderProcessTypeEnum-13, 抢单超时=WorkorderProcessTypeEnum-14, 抢单超时=WorkorderProcessTypeEnum-15, 抢单超时=WorkorderProcessTypeEnum-16, 接单=WorkorderProcessTypeEnum-17, 接单=WorkorderProcessTypeEnum-18, 退单=WorkorderProcessTypeEnum-19, 退单=WorkorderProcessTypeEnum-20, 暂停=WorkorderProcessTypeEnum-21, 暂停=WorkorderProcessTypeEnum-22, 暂停=WorkorderProcessTypeEnum-23, 暂停=WorkorderProcessTypeEnum-24, 继续=WorkorderProcessTypeEnum-25, 继续=WorkorderProcessTypeEnum-26, 完成=WorkorderProcessTypeEnum-27, 终止=WorkorderProcessTypeEnum-28, 终止=WorkorderProcessTypeEnum-29, 转单=WorkorderProcessTypeEnum-30, 验证=WorkorderProcessTypeEnum-31, 验证=WorkorderProcessTypeEnum-32, 验证=WorkorderProcessTypeEnum-33, 存档=WorkorderProcessTypeEnum-34, 审批申请=WorkorderProcessTypeEnum-35, 审批通过=WorkorderProcessTypeEnum-36, 审批拒绝=WorkorderProcessTypeEnum-37, 更新=WorkorderProcessTypeEnum-38, 升级=WorkorderProcessTypeEnum-39, 升级=WorkorderProcessTypeEnum-40, 升级=WorkorderProcessTypeEnum-41, 退单=WorkorderProcessTypeEnum-42, 退单=WorkorderProcessTypeEnum-43, 暂停=WorkorderProcessTypeEnum-44}"
+  },
+  "swagger_enum_0e852498f42f440f3f471fa4e743d270": {
+    "name": "swagger_enum_0e852498f42f440f3f471fa4e743d270",
+    "def": "{已完成=Completed-1, 待完成=WaitComplete-2, 未完成=Incomplete-3}"
+  },
+  "swagger_enum_4896490379da1794413b3d1dec8ac1fc": {
+    "name": "swagger_enum_4896490379da1794413b3d1dec8ac1fc",
+    "def": "{创建=Create-1, 派工=Dispatch-2, 抢单=Scramble-3, 接单=Accept-4, 退单=Refund-5, 增派=AddExecutor-6, 暂停=Suspend-7, 继续=Continue-8, 待料=WaitMaterial-9, 来料=IncomingMaterial-10, 终止=Termination-11, 终止转单=TerminationTransfer-12, 完成=Complete-13, 验证=Check-14, 存档=Archive-15, 转单=Transfer-16, 抢单超时=ScrambleTimeout-17, 审批申请=Approve-18, 打印=Print-19, 审批操作(通过/拒绝)=ApprovalOperation-20}"
+  },
+  "swagger_enum_f2cc5ac74781927cb16e4755a693b345": {
+    "name": "swagger_enum_f2cc5ac74781927cb16e4755a693b345",
+    "def": "{事件升级=Event-1, 固定通知=Fix-2, 自定义通知=Customize-3}"
+  },
+  "swagger_enum_bd8e6f743ad816d78ea8eabae55bebf6": {
+    "name": "swagger_enum_bd8e6f743ad816d78ea8eabae55bebf6",
+    "def": "{创建=Create-1, 排程派工=Dispatch-2, 审批申请=Approval-3, 审批通过=ApprovalSuccess-4, 审批不通过=ApprovalFail-5, 验证通过=CheckSuccess-6, 验证不通过=CheckFail-7, 抢单成功=ScrambleSuccess-8, 全部暂停=AllSuspend-9, 终止=Termination-11, 完成=Complete-12, 未响应升级=NoResponseUpgrade-13, 未接单升级=NoAcceptUpgrade-14, 未完成升级=NoCompleteUpgrade-15, 审批提醒=PmApproval-16, 重新派工=AgainDispatch-17, 待转单=Transfer-18}"
+  },
+  "swagger_enum_3abfb1c35fc4eb3222f05f94e555984b": {
+    "name": "swagger_enum_3abfb1c35fc4eb3222f05f94e555984b",
+    "def": "{女=-0, 男=-1}"
+  },
+  "swagger_enum_3d799c9e5fba6feb632ffd7975239521": {
+    "name": "swagger_enum_3d799c9e5fba6feb632ffd7975239521",
+    "def": "{SCHOOL_RECRUITMENT=RevolvingTypeEnum-1, SOCIETY_RECRUITMENT=RevolvingTypeEnum-2, INTERNAL_SECONDMENT=RevolvingTypeEnum-3, INTERN=RevolvingTypeEnum-4, SECONDMENT=RevolvingTypeEnum-5, COMMUNICATE=RevolvingTypeEnum-6, OTHER=RevolvingTypeEnum-9}"
+  },
+  "swagger_enum_f9063997d999c37cf497d874130e3abb": {
+    "name": "swagger_enum_f9063997d999c37cf497d874130e3abb",
+    "def": "{锁定=LockStatusEnum-1, 未锁定=LockStatusEnum-0}"
+  },
+  "swagger_enum_85746cd958dae2366d4b10f522ccaeb1": {
+    "name": "swagger_enum_85746cd958dae2366d4b10f522ccaeb1",
+    "def": "{合租=RentTypeEnum-0, 整租=RentTypeEnum-1}"
+  },
+  "swagger_enum_feeaacdbe30576e7677eac1f066c2bc8": {
+    "name": "swagger_enum_feeaacdbe30576e7677eac1f066c2bc8",
+    "def": "{空房=SourceStatusEnum-0, 满房=SourceStatusEnum-1, 部分空房=SourceStatusEnum-2}"
+  },
+  "swagger_enum_2ae1254dfc37a53391b08d893431f913": {
+    "name": "swagger_enum_2ae1254dfc37a53391b08d893431f913",
+    "def": "{大楼=SpaceTypeEnum-0, 楼层=SpaceTypeEnum-1, 套间=SpaceTypeEnum-2, 房间=SpaceTypeEnum-3, 床位=SpaceTypeEnum-4}"
+  },
+  "swagger_enum_f71dd92a20eb7e5eb62f37e13f51eadb": {
+    "name": "swagger_enum_f71dd92a20eb7e5eb62f37e13f51eadb",
+    "def": "{申请入住=-0, 申请续住=-1, 申请退住=-2, 换房=-3, 人才房申请=-4, 入住确认=-5}"
+  },
+  "swagger_enum_8cb69e46df58bd6dc33997645c352a41": {
+    "name": "swagger_enum_8cb69e46df58bd6dc33997645c352a41",
+    "def": "{待分配=RevolvingAllocationStatusEnum-0, 已入住=RevolvingAllocationStatusEnum-1, 已逾期=RevolvingAllocationStatusEnum-2, 已退住=RevolvingAllocationStatusEnum-3, 已取消=RevolvingAllocationStatusEnum-4, 已完成=RevolvingAllocationStatusEnum-5, 待续住=RevolvingAllocationStatusEnum-6, 待退住=RevolvingAllocationStatusEnum-7, 待确认=RevolvingAllocationStatusEnum-8, 待选房=RevolvingAllocationStatusEnum-9, 已选房=RevolvingAllocationStatusEnum-10, 未选房=RevolvingAllocationStatusEnum-11, 已分配=RevolvingAllocationStatusEnum-12}"
+  },
+  "swagger_enum_36c91cd6e6d4aa38d627243c69d7b10a": {
+    "name": "swagger_enum_36c91cd6e6d4aa38d627243c69d7b10a",
+    "def": "{分配=-0, 取消分配=-1, 续住=-2, 取消续住=-3, 退住=-4, 取消退房=-5, 换房=-6, 取消换房=-7, 确认=-8, 申请入住=-9, 续住申请=-10, 人才房申请=-11, 抽签=-12, 抽签=-13, 选房=-14, 选房=-15, 选房=-16, 入住确认=-17, 退住确认=-18, 退住申请=-19}"
+  },
+  "swagger_enum_b01039a9a77de634f305b2408bc6b1da": {
+    "name": "swagger_enum_b01039a9a77de634f305b2408bc6b1da",
+    "def": "{否=BooleanEnum-0, 是=BooleanEnum-1}"
+  },
+  "swagger_enum_765a5b80bede3c441f3f56590eb54cbb": {
+    "name": "swagger_enum_765a5b80bede3c441f3f56590eb54cbb",
+    "def": "{未绑定=RevolvingLockBindingStatusEnum-1, 已绑定=RevolvingLockBindingStatusEnum-2}"
+  },
+  "swagger_enum_f805e20d18dbe72df279a2190bf94619": {
+    "name": "swagger_enum_f805e20d18dbe72df279a2190bf94619",
+    "def": "{套间=RevolvingLockBindingTypeEnum-1, 房间=RevolvingLockBindingTypeEnum-2}"
+  },
+  "swagger_enum_3c8061642bedd04f9c46df3d34ddaee4": {
+    "name": "swagger_enum_3c8061642bedd04f9c46df3d34ddaee4",
+    "def": "{在线=RevolvingLockFacOnOffEnum-1, 离线=RevolvingLockFacOnOffEnum-2}"
+  },
+  "swagger_enum_f75205a4ed61bbe62b23ebbd18098dfe": {
+    "name": "swagger_enum_f75205a4ed61bbe62b23ebbd18098dfe",
+    "def": "{内门锁=RevolvingLockFacTypeEnum-1, 外门锁=RevolvingLockFacTypeEnum-2, 门锁=RevolvingLockFacTypeEnum-3}"
+  },
+  "swagger_enum_5236bcd1956f75cc86ffc99ce8e865fd": {
+    "name": "swagger_enum_5236bcd1956f75cc86ffc99ce8e865fd",
+    "def": "{待处理=RevolvingLockInstallStateEnum-1, 待分配=RevolvingLockInstallStateEnum-2, 已分配=RevolvingLockInstallStateEnum-3, 已完成=RevolvingLockInstallStateEnum-4, 已关闭=RevolvingLockInstallStateEnum-5}"
+  },
+  "swagger_enum_24c51d723f507ffc1e7f1b2b0fcb42f8": {
+    "name": "swagger_enum_24c51d723f507ffc1e7f1b2b0fcb42f8",
+    "def": "{未安装=RevolvingLockSpStateEnum-1, 可管理=RevolvingLockSpStateEnum-2}"
+  },
+  "swagger_enum_48fd0a8db1b3aedb049195ffe4edad70": {
+    "name": "swagger_enum_48fd0a8db1b3aedb049195ffe4edad70",
+    "def": "{待发布=TalentActivityStatusEnum-1, 待抽签=TalentActivityStatusEnum-2, 抽签中=TalentActivityStatusEnum-3, 待选房=TalentActivityStatusEnum-4, 选房中=TalentActivityStatusEnum-5, 已完成=TalentActivityStatusEnum-6}"
+  },
+  "swagger_enum_33d92cae1c7f54967ceb0ab11c39c640": {
+    "name": "swagger_enum_33d92cae1c7f54967ceb0ab11c39c640",
+    "def": "{活动列表=TalentActivityH5PageEnum-1, 抽签页面=TalentActivityH5PageEnum-2, 等待抽签结果=TalentActivityH5PageEnum-3, (选房)抽签结果页面=TalentActivityH5PageEnum-4, 活动结束页面=TalentActivityH5PageEnum-5}"
+  },
+  "swagger_enum_a941d2eb9c3e89a0a3a9d46844700497": {
+    "name": "swagger_enum_a941d2eb9c3e89a0a3a9d46844700497",
+    "def": "{待抽签=TalentActivityEmployeeStatusEnum-1, 未抽签=TalentActivityEmployeeStatusEnum-2, 已抽签=TalentActivityEmployeeStatusEnum-3, 待选房=TalentActivityEmployeeStatusEnum-4, 已选房=TalentActivityEmployeeStatusEnum-5, 未选房=TalentActivityEmployeeStatusEnum-6}"
+  }
+}

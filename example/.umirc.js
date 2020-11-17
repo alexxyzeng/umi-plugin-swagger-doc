@@ -5,7 +5,7 @@ export default {
     [
       join(__dirname, "..", require("../package").main || "index.js"),
       {
-        swaggerUrl: "http://df-datacenter.v220.svc.cluster.local",
+        swaggerUrl: "http://df-revolving.v218.svc.cluster.local",
         swaggerDocPath: "/v2/api-docs",
         swaggerUIPath: "",
         // 配置文件路径
